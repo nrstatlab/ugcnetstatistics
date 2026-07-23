@@ -147,6 +147,8 @@ For AR(1) with $\phi=0.8$: $\rho_k=0.8^k$ — geometric decay. PACF: $\phi_{11}=
 
 <p>Strong stationarity with finite second moments $\Rightarrow$ weak stationarity. Converse not true unless Gaussian.</p>
 
+<p><strong>Intuition.</strong> Stationarity is what makes a <em>single</em> observed series useful: because the statistical &ldquo;rules&rdquo; (mean, variance, autocorrelations) do not drift over time, we can pool information across time to estimate them. Without it, every time point would effectively be a sample of size one from a different distribution.</p>
+
 <h3>Ergodicity</h3>
 A process is ergodic in mean if $\bar Y_T\xrightarrow{P}\mu$ as $T\to\infty.$ Sufficient: $\sum_{k=0}^\infty|\gamma_k|<\infty.$
 
@@ -197,6 +199,8 @@ $$Y_t=\mu+\varepsilon_t+\theta_1\varepsilon_{t-1}+\cdots+\theta_q\varepsilon_{t-
 
 <h3>Invertibility</h3>
 MA($q$) invertible if all roots of $\theta(B)=1+\theta_1 B+\cdots+\theta_q B^q$ lie outside unit circle. Then $\varepsilon_t=\sum\pi_j Y_{t-j}.$
+
+<p><strong>Intuition.</strong> Invertibility lets us rewrite the unobservable shock $\varepsilon_t$ as a <em>convergent</em> weighted sum of present and past <em>observed</em> values $Y_{t-j}$ &mdash; without it, forecasting is impossible. It also fixes identifiability: an MA(1) with parameter $\theta$ and one with $1/\theta$ have identical ACFs, and the invertibility requirement $|\theta|<1$ singles out the unique usable version.</p>
 
 <div class="example">
 <span class="ex-label">EXAMPLE 1</span>

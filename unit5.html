@@ -97,6 +97,8 @@ window.MathJax = {
 <strong>p-value:</strong> probability under $H_0$ of obtaining a test statistic as or more extreme than observed.
 </div>
 
+<p><strong>Common misconception.</strong> The $p$-value is <em>not</em> $P(H_0\text{ is true})$ and it is not the probability the result is due to chance. It is computed <em>assuming</em> $H_0$ holds: it answers &ldquo;if $H_0$ were true, how surprising would data this extreme be?&rdquo; A small $p$-value means the observed data sit far in the tail of the null distribution.</p>
+
 <h3>Test Function</h3>
 A test is a function $\phi(x)\in[0,1]$: probability of rejection given data. $E_\theta[\phi(X)]=$ power function.
 
@@ -120,6 +122,8 @@ For testing simple $H_0:\theta=\theta_0$ vs simple $H_1:\theta=\theta_1$ at size
 $$R=\left\{x:\frac{L(x;\theta_1)}{L(x;\theta_0)}\ge k\right\},$$
 with $k$ chosen so that $P_{\theta_0}(R)=\alpha.$
 </div>
+
+<p><strong>Intuition.</strong> To maximise power at a fixed size, spend your allowed Type-I &ldquo;budget&rdquo; on the sample outcomes where the data are <em>relatively</em> far more likely under $H_1$ than under $H_0$. Ranking outcomes by the likelihood ratio and rejecting the top ones until the size reaches $\alpha$ is provably the most powerful strategy &mdash; every unit of $\alpha$ is bought where it buys the most power.</p>
 
 <div class="example">
 <span class="ex-label">EXAMPLE 1</span>

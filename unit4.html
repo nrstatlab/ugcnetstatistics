@@ -197,6 +197,8 @@ $$V(T)\ge\frac{[g'(\theta)]^2}{nI(\theta)},$$
 where Fisher information $I(\theta)=E\left[\left(\frac{\partial\log f}{\partial\theta}\right)^2\right]=-E\left[\frac{\partial^2\log f}{\partial\theta^2}\right].$
 </div>
 
+<p><strong>Intuition.</strong> Fisher information $I(\theta)$ measures the average curvature (sharpness) of the log-likelihood in $\theta$: the more sharply the likelihood peaks around the true value, the more the data &ldquo;pin down&rdquo; the parameter, and the smaller the variance any unbiased estimator can achieve. The CRLB is therefore the precision ceiling imposed by the model itself, and an estimator meeting it is doing as well as the information in the data allows.</p>
+
 <p>Equality holds iff there exists an exponential family structure with $T$ as canonical statistic.</p>
 
 <div class="example">
@@ -220,6 +222,8 @@ $T(X)$ is <strong>sufficient</strong> for $\theta$ if conditional distribution o
 $$f(x;\theta)=g(T(x),\theta)\,h(x)$$
 for some functions $g,h.$
 </div>
+
+<p><strong>Intuition.</strong> A sufficient statistic compresses all the parameter-relevant information in the sample into a smaller summary: once $T$ is known, the leftover randomness in the raw data carries no further information about $\theta$. The factorization theorem lets you certify sufficiency just by inspecting how $\theta$ enters the likelihood &mdash; if $\theta$ &ldquo;touches&rdquo; the data only through $T(x)$, then $T$ is sufficient.</p>
 
 <h3>Exponential Family</h3>
 $f(x;\theta)=\exp\{\eta(\theta)T(x)-A(\theta)\}h(x)$ — $T$ is sufficient and complete.
@@ -259,6 +263,8 @@ For $U(\theta,\theta+1)$: $(X_{(1)},X_{(n)})$ is minimal sufficient; range $X_{(
 <div class="definition">
 A family $\{f(x;\theta):\theta\in\Theta\}$ is <strong>complete</strong> if $E_\theta[g(T)]=0\,\forall\theta\Rightarrow g(T)=0$ a.s. for all $\theta.$
 </div>
+
+<p><strong>Intuition.</strong> Completeness says the family is &ldquo;rich enough&rdquo; that the only unbiased estimator of $0$ built from $T$ is the trivial one ($g(T)\equiv 0$). This rules out two <em>different</em> unbiased functions of $T$ estimating the same quantity, which is precisely why a statistic that is both complete <em>and</em> sufficient delivers a <em>unique</em> UMVUE (Lehmann&ndash;Scheff&eacute;).</p>
 
 <p>Exponential family is complete (under usual rank conditions on the natural parameter space).</p>
 

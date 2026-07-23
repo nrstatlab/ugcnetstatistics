@@ -294,6 +294,8 @@ Seasonal dummies: 4 quarters, use $D_2,D_3,D_4$ with Q1 as base. Test $D_2=D_3=D
 <li>"Wrong" sign or large magnitude.</li>
 </ul>
 
+<p><strong>Intuition.</strong> When two predictors move together, the data cannot tell whose effect is whose, so the individual slopes are estimated imprecisely (huge standard errors) even though the predictors <em>jointly</em> explain the response well (high $R^2$, significant $F$). This is the classic &ldquo;insignificant $t$'s but significant $F$&rdquo; signature &mdash; the estimates are unbiased but unstable, not wrong on average.</p>
+
 <h3>Detection</h3>
 <ul>
 <li><strong>VIF:</strong> $\text{VIF}_j=1/(1-R_j^2)$; VIF $>10$ flagged.</li>
@@ -445,6 +447,8 @@ Reverse causality (omitted variables, simultaneity) → $\text{Cov}(X,\varepsilo
 <p>Instrument $Z$ satisfies: (i) $\text{Cov}(Z,X)\ne 0$ (relevance), (ii) $\text{Cov}(Z,\varepsilon)=0$ (exogeneity).
 $$\hat\beta_{IV}=(Z'X)^{-1}Z'y.$$
 Consistent for $\beta$ even when $X$ is endogenous; less efficient than OLS when OLS is valid.</p>
+
+<p><strong>Intuition.</strong> When $X$ is correlated with the error, OLS cannot tell the effect of $X$ apart from the error moving with it, so it is biased. A valid instrument $Z$ shifts $X$ (relevance) only through channels unrelated to the error (exogeneity); using just that &ldquo;clean&rdquo; variation in $X$ recovers a consistent slope. Weak instruments (low $\text{Cov}(Z,X)$) make this cure unreliable.</p>
 
 <div class="example">
 <span class="ex-label">EXAMPLE 1</span>

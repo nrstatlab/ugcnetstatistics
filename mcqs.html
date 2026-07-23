@@ -79,7 +79,7 @@ window.MathJax = {
 </div>
 </section>
 
-<!-- ============================ UNIT 1 ============================ -->
+<!-- ============================ UNIT 1 ============================ -->1
 <div class="mcq-unit-head" id="unit1">
 <h2>Unit 1 — Probability and Distributions (50 MCQs)</h2>
 <p>Probability, RVs, distributions, MGF, joint distributions, CLT, LLN.</p>
@@ -95,7 +95,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">3. Bayes' theorem expresses the posterior probability in terms of:</div>
 <ol class="options"><li>Likelihood only</li><li>Prior only</li><li>Prior &times; Likelihood / Marginal</li><li>Conditional / Joint</li></ol>
-<details><summary>Show Answer</summary><p>C.</p></details></div>
+<details><summary>Show Answer</summary><p>C. Posterior $=$ (prior $\times$ likelihood) / marginal: $P(B_k\mid A)=\dfrac{P(A\mid B_k)P(B_k)}{\sum_i P(A\mid B_i)P(B_i)}$.</p></details></div>
 
 <div class="mcq"><div class="q">4. The MGF of a Poisson distribution with mean $\lambda$ is:</div>
 <ol class="options"><li>$e^{\lambda(e^t-1)}$</li><li>$e^{\lambda t}$</li><li>$(1-\lambda t)^{-1}$</li><li>$e^{-\lambda+\lambda t}$</li></ol>
@@ -127,7 +127,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">11. The convergence in probability implies convergence in:</div>
 <ol class="options"><li>$L^2$</li><li>Distribution</li><li>Almost sure</li><li>Mean square</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. The chain of implications is a.s. $\Rightarrow$ in probability $\Rightarrow$ in distribution, so convergence in probability implies convergence in distribution (converse false in general).</p></details></div>
 
 <div class="mcq"><div class="q">12. The variance of the sample mean from $n$ iid observations with population variance $\sigma^2$ is:</div>
 <ol class="options"><li>$\sigma^2$</li><li>$\sigma^2/n$</li><li>$n\sigma^2$</li><li>$\sigma^2/\sqrt n$</li></ol>
@@ -151,7 +151,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">17. For a Cauchy distribution:</div>
 <ol class="options"><li>Mean exists, variance does not</li><li>Neither mean nor variance exists</li><li>Both exist</li><li>Variance exists, mean does not</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. The Cauchy density has tails so heavy that $\int|x|f(x)\,dx$ diverges; hence neither the mean nor the variance exists.</p></details></div>
 
 <div class="mcq"><div class="q">18. If $X_1,X_2$ are iid $N(0,1)$, then $X_1^2+X_2^2$ has distribution:</div>
 <ol class="options"><li>$\chi^2_2$</li><li>$N(0,2)$</li><li>$F_{1,1}$</li><li>$t_2$</li></ol>
@@ -187,7 +187,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">26. For $X\sim\text{Bin}(n,p)$, the skewness is zero when:</div>
 <ol class="options"><li>$p=0$</li><li>$p=1$</li><li>$p=1/2$</li><li>$p=1/4$</li></ol>
-<details><summary>Show Answer</summary><p>C.</p></details></div>
+<details><summary>Show Answer</summary><p>C. Binomial skewness is $(1-2p)/\sqrt{npq}$, which vanishes only at $p=1/2$, where the distribution is symmetric.</p></details></div>
 
 <div class="mcq"><div class="q">27. The MGF uniquely determines the distribution provided:</div>
 <ol class="options"><li>$X$ is bounded</li><li>It exists in a neighbourhood of 0</li><li>$E(X)$ is finite</li><li>$X$ is symmetric</li></ol>
@@ -195,7 +195,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">28. If $X_n\xrightarrow{d}c$ (constant), then $X_n\xrightarrow{P}c$:</div>
 <ol class="options"><li>Always</li><li>Only if $X_n$ is iid</li><li>Never</li><li>Only if variance is finite</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. Convergence in distribution to a <em>constant</em> is equivalent to convergence in probability to that constant (a special, stronger case).</p></details></div>
 
 <div class="mcq"><div class="q">29. The coefficient of variation of $N(\mu,\sigma^2)$ is:</div>
 <ol class="options"><li>$\mu/\sigma$</li><li>$\sigma/\mu$</li><li>$\sigma^2/\mu$</li><li>$\sqrt{\sigma}/\mu$</li></ol>
@@ -203,7 +203,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">30. If $X\sim\chi^2_n$, then $E(X)$ and $\text{Var}(X)$ are:</div>
 <ol class="options"><li>$n,n$</li><li>$n,2n$</li><li>$2n,n$</li><li>$n,n^2$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. $\chi^2_n=\text{Gamma}(n/2,1/2)$, so $E(X)=n$ and $\text{Var}(X)=2n$.</p></details></div>
 
 <div class="mcq"><div class="q">31. The Slutsky theorem says if $X_n\xrightarrow{d}X,\,Y_n\xrightarrow{P}c$, then:</div>
 <ol class="options"><li>$X_n Y_n\xrightarrow{P}cX$</li><li>$X_n+Y_n\xrightarrow{d}X+c$</li><li>$X_n/Y_n\xrightarrow{d}X$</li><li>None</li></ol>
@@ -211,7 +211,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">32. The pdf of order statistic $X_{(k)}$ from $n$ iid Uniform(0,1) variables is:</div>
 <ol class="options"><li>Beta$(k,n-k+1)$</li><li>Beta$(k+1,n-k)$</li><li>Gamma$(k,1)$</li><li>$\chi^2_{2k}$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. The $k$th order statistic of a Uniform$(0,1)$ sample is Beta$(k,n-k+1)$, with mean $k/(n+1)$.</p></details></div>
 
 <div class="mcq"><div class="q">33. For two independent Poisson variables with means $\lambda_1,\lambda_2$, $X_1+X_2$ has distribution:</div>
 <ol class="options"><li>$\text{Poisson}(\lambda_1+\lambda_2)$</li><li>$\text{Poisson}(\lambda_1\lambda_2)$</li><li>$\text{Poisson}(\max)$</li><li>Not Poisson</li></ol>
@@ -227,7 +227,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">36. The De Moivre–Laplace approximation states $\text{Bin}(n,p)\approx$:</div>
 <ol class="options"><li>$N(np,np)$</li><li>$N(np,npq)$</li><li>$N(p,pq/n)$</li><li>$\text{Poisson}(np)$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. De Moivre$-$Laplace: for large $n$, $\text{Bin}(n,p)\approx N(np,\,npq)$ (variance $npq$, not $np$).</p></details></div>
 
 <div class="mcq"><div class="q">37. The moment of $X^r$ exists iff $E|X|^r$ is:</div>
 <ol class="options"><li>Zero</li><li>Negative</li><li>Finite</li><li>Infinite</li></ol>
@@ -267,7 +267,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">46. For Negative Binomial$(r,p)$, $E(X)$ (no. of trials for $r$th success) is:</div>
 <ol class="options"><li>$r$</li><li>$r/p$</li><li>$rp$</li><li>$p/r$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. For Negative Binomial (trials until the $r$th success), $E(X)=r/p$ and $\text{Var}(X)=rq/p^2$.</p></details></div>
 
 <div class="mcq"><div class="q">47. If $X,Y$ iid $\text{Exp}(\lambda)$, then $X+Y\sim$:</div>
 <ol class="options"><li>$\text{Exp}(2\lambda)$</li><li>$\text{Gamma}(2,\lambda)$</li><li>$\chi^2_4$</li><li>$N(2/\lambda,2/\lambda^2)$</li></ol>
@@ -279,13 +279,13 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">49. For the multinomial distribution with parameters $(n,p_1,\ldots,p_k)$, $\text{Cov}(X_i,X_j)$ for $i\ne j$ is:</div>
 <ol class="options"><li>$np_i p_j$</li><li>$-np_i p_j$</li><li>0</li><li>$p_i p_j$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Multinomial counts are negatively associated (they sum to $n$): $\text{Cov}(X_i,X_j)=-np_ip_j$ for $i\ne j$.</p></details></div>
 
 <div class="mcq"><div class="q">50. The standard normal distribution has kurtosis:</div>
 <ol class="options"><li>0</li><li>1</li><li>3</li><li>$\pi$</li></ol>
 <details><summary>Show Answer</summary><p>C. (Excess kurtosis = 0; raw kurtosis = 3.)</p></details></div>
 
-<!-- ============================ UNIT 2 ============================ -->
+<!-- ============================ UNIT 2 ============================ -->2
 <div class="mcq-unit-head" id="unit2">
 <h2>Unit 2 — Real Analysis &amp; Matrix Algebra (50 MCQs)</h2>
 <p>Sequences, series, continuity, differentiation, vector spaces, eigenvalues, quadratic forms.</p>
@@ -369,11 +369,11 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">20. For $n\times n$ matrix $A$, $\det A$ equals:</div>
 <ol class="options"><li>Sum of eigenvalues</li><li>Product of eigenvalues</li><li>Trace</li><li>Sum of diagonals only</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. The determinant equals the product of the eigenvalues: $\det A=\prod_i\lambda_i$.</p></details></div>
 
 <div class="mcq"><div class="q">21. $\text{tr}(A)$ equals:</div>
 <ol class="options"><li>Sum of eigenvalues</li><li>Product of eigenvalues</li><li>$\det A$</li><li>Rank</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. The trace equals the sum of the eigenvalues: $\text{tr}(A)=\sum_i\lambda_i$.</p></details></div>
 
 <div class="mcq"><div class="q">22. $\det(AB)$ equals:</div>
 <ol class="options"><li>$\det A+\det B$</li><li>$\det A\cdot\det B$</li><li>$\det A-\det B$</li><li>$|\det A-\det B|$</li></ol>
@@ -385,7 +385,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">24. Eigenvalues of a real symmetric matrix are:</div>
 <ol class="options"><li>Always real</li><li>Always complex</li><li>Always positive</li><li>Always zero</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. By the spectral theorem, a real symmetric matrix has all-real eigenvalues and an orthonormal eigenbasis.</p></details></div>
 
 <div class="mcq"><div class="q">25. Eigenvectors corresponding to distinct eigenvalues of a symmetric matrix are:</div>
 <ol class="options"><li>Identical</li><li>Orthogonal</li><li>Parallel</li><li>Linearly dependent</li></ol>
@@ -417,15 +417,15 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">32. For idempotent matrix ($A^2=A$), eigenvalues are:</div>
 <ol class="options"><li>0 or 1</li><li>$\pm 1$</li><li>0 only</li><li>Any real</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. $A^2=A$ forces $\lambda^2=\lambda$ on each eigenvalue, so every eigenvalue is $0$ or $1$.</p></details></div>
 
 <div class="mcq"><div class="q">33. For an idempotent matrix $A$, $\text{rank}(A)=$</div>
 <ol class="options"><li>$\det A$</li><li>$\text{tr}(A)$</li><li>$n$</li><li>0</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. For an idempotent matrix, rank $=$ trace $=$ number of unit eigenvalues.</p></details></div>
 
 <div class="mcq"><div class="q">34. A nilpotent matrix has all eigenvalues:</div>
 <ol class="options"><li>Equal to 1</li><li>Equal to 0</li><li>Positive</li><li>Negative</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. $A^k=0$ forces $\lambda^k=0$, so every eigenvalue of a nilpotent matrix is $0$.</p></details></div>
 
 <div class="mcq"><div class="q">35. Cramer's rule applies only when:</div>
 <ol class="options"><li>$\det A=0$</li><li>$\det A\ne 0$</li><li>$A$ symmetric</li><li>$b=0$</li></ol>
@@ -445,7 +445,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">39. The alternating series $\sum (-1)^n/n$:</div>
 <ol class="options"><li>Converges absolutely</li><li>Converges conditionally</li><li>Diverges</li><li>Equals 1</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. $\sum(-1)^n/n$ converges (Leibniz) but $\sum 1/n$ diverges, so it is conditionally, not absolutely, convergent.</p></details></div>
 
 <div class="mcq"><div class="q">40. Differentiability of $f$ at $a$ implies:</div>
 <ol class="options"><li>Continuity at $a$</li><li>Continuity nowhere</li><li>$f(a)=0$</li><li>$f'(a)=0$</li></ol>
@@ -461,7 +461,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">43. Rank of $\begin{pmatrix}1&amp;2\\2&amp;4\end{pmatrix}$ is:</div>
 <ol class="options"><li>0</li><li>1</li><li>2</li><li>Undefined</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. The second row is twice the first, so the rows are dependent and the rank is $1$.</p></details></div>
 
 <div class="mcq"><div class="q">44. The eigenvalues of $\begin{pmatrix}2&amp;0\\0&amp;3\end{pmatrix}$ are:</div>
 <ol class="options"><li>2,3</li><li>0,1</li><li>$\pm\sqrt 6$</li><li>5</li></ol>
@@ -489,9 +489,9 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">50. The characteristic polynomial of $\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}$ is:</div>
 <ol class="options"><li>$\lambda^2-(a+d)\lambda+(ad-bc)$</li><li>$\lambda^2+(a+d)\lambda-(ad-bc)$</li><li>$\lambda^2-(ad-bc)\lambda+(a+d)$</li><li>$\lambda^2+(ad-bc)$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. Characteristic polynomial $=\lambda^2-(\text{tr})\lambda+\det=\lambda^2-(a+d)\lambda+(ad-bc)$.</p></details></div>
 
-<!-- ============================ UNIT 3 ============================ -->
+<!-- ============================ UNIT 3 ============================ -->3
 <div class="mcq-unit-head" id="unit3">
 <h2>Unit 3 — Sampling Methods &amp; Design of Experiments (50 MCQs)</h2>
 <p>SRS, stratified, cluster, PPS, ANOVA, CRD, RBD, LSD, BIBD.</p>
@@ -511,7 +511,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">4. Neyman allocation in stratified sampling allocates $n_h$ proportional to:</div>
 <ol class="options"><li>$N_h$</li><li>$N_h S_h$</li><li>$S_h^2$</li><li>$N_h^2$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Neyman allocation sets $n_h\propto N_hS_h$: sample more where a stratum is larger or more variable.</p></details></div>
 
 <div class="mcq"><div class="q">5. Optimum allocation under cost constraint allocates $n_h$ proportional to:</div>
 <ol class="options"><li>$N_h S_h/\sqrt{c_h}$</li><li>$N_h S_h c_h$</li><li>$N_h/c_h$</li><li>$S_h$</li></ol>
@@ -519,7 +519,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">6. Stratified sampling is more efficient than SRS when:</div>
 <ol class="options"><li>Strata are homogeneous within</li><li>Strata are heterogeneous within</li><li>Always</li><li>Never</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. Stratification gains most when strata are internally homogeneous, since between-strata variation is removed from the error.</p></details></div>
 
 <div class="mcq"><div class="q">7. In systematic sampling with $N=20,n=4$, the sampling interval $k$ is:</div>
 <ol class="options"><li>4</li><li>5</li><li>20</li><li>10</li></ol>
@@ -527,7 +527,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">8. Systematic sampling is efficient when intraclass correlation $\rho_w$ is:</div>
 <ol class="options"><li>Positive and large</li><li>Negative</li><li>Zero</li><li>Equal to 1</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Systematic sampling beats SRS when units within the same sample are heterogeneous, i.e. intraclass correlation $\rho_w<0$.</p></details></div>
 
 <div class="mcq"><div class="q">9. Ratio estimator $\hat{\bar Y}_R=(\bar y/\bar x)\bar X$ is more efficient than SRS when:</div>
 <ol class="options"><li>$\rho_{xy}&gt;\tfrac{1}{2}\,C_x/C_y$</li><li>$\rho=0$</li><li>$X$ and $Y$ are independent</li><li>$\bar x=\bar y$</li></ol>
@@ -539,7 +539,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">11. Cluster sampling is efficient when:</div>
 <ol class="options"><li>Clusters are heterogeneous within</li><li>Clusters are homogeneous within</li><li>$\rho&gt;0$</li><li>Both A and C imply inefficient</li></ol>
-<details><summary>Show Answer</summary><p>A. Want $\rho&lt;0$.</p></details></div>
+<details><summary>Show Answer</summary><p>A. Clusters should be internally heterogeneous ($\rho<0$) so each surveyed cluster mirrors the whole population.</p></details></div>
 
 <div class="mcq"><div class="q">12. Horvitz–Thompson estimator of total is:</div>
 <ol class="options"><li>$\sum y_i/\pi_i$ ($i\in s$)</li><li>$\sum y_i p_i$</li><li>$\sum y_i \pi_i$</li><li>$\bar y N$</li></ol>
@@ -575,7 +575,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">20. In a $t\times t$ Latin square design, error df is:</div>
 <ol class="options"><li>$(t-1)^2$</li><li>$(t-1)(t-2)$</li><li>$t-1$</li><li>$t^2-1$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. LSD error df $=(t-1)(t-2)$: from the total $t^2-1$, subtract $3(t-1)$ for rows, columns and treatments.</p></details></div>
 
 <div class="mcq"><div class="q">21. The number of effects estimated in a $2^3$ factorial (excl. intercept) is:</div>
 <ol class="options"><li>3</li><li>6</li><li>7</li><li>8</li></ol>
@@ -591,11 +591,11 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">24. BIBD parameters satisfy:</div>
 <ol class="options"><li>$bk=vr$, $\lambda(v-1)=r(k-1)$</li><li>$bk=v\lambda$</li><li>$r=k$</li><li>$b=v$ always</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. Every BIBD satisfies $bk=vr$ and $\lambda(v-1)=r(k-1)$.</p></details></div>
 
 <div class="mcq"><div class="q">25. Fisher's inequality for BIBD states:</div>
 <ol class="options"><li>$b\le v$</li><li>$b\ge v$</li><li>$b=v$</li><li>$b=r$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Fisher's inequality: any BIBD has $b\ge v$ (at least as many blocks as treatments).</p></details></div>
 
 <div class="mcq"><div class="q">26. Connected design means:</div>
 <ol class="options"><li>Block contrasts are estimable</li><li>All treatment elementary contrasts are estimable</li><li>Treatments are equally replicated</li><li>Blocks are equal-sized</li></ol>
@@ -607,7 +607,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">28. Efficiency factor of a BIBD is:</div>
 <ol class="options"><li>$\lambda v/(rk)$</li><li>$rk/(\lambda v)$</li><li>$b/v$</li><li>$r/k$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. The efficiency factor of a BIBD is $E=\lambda v/(rk)$, always $<1$ relative to a complete-block design.</p></details></div>
 
 <div class="mcq"><div class="q">29. The ANOVA F-test compares:</div>
 <ol class="options"><li>Between to within mean squares</li><li>Within to total</li><li>Between to total</li><li>Total to error</li></ol>
@@ -695,9 +695,9 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">50. The number of mutually orthogonal Latin squares of order $n$ is at most:</div>
 <ol class="options"><li>$n$</li><li>$n-1$</li><li>$n+1$</li><li>$n^2$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. There are at most $n-1$ mutually orthogonal Latin squares of order $n$ (the maximum is reached when $n$ is a prime power).</p></details></div>
 
-<!-- ============================ UNIT 4 ============================ -->
+<!-- ============================ UNIT 4 ============================ -->4
 <div class="mcq-unit-head" id="unit4">
 <h2>Unit 4 — Estimation Theory (50 MCQs)</h2>
 <p>Unbiasedness, MLE, UMVUE, Cramér–Rao, sufficiency, Rao–Blackwell, Lehmann–Scheffé, intervals.</p>
@@ -717,7 +717,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">4. MLE is generally:</div>
 <ol class="options"><li>Always unbiased</li><li>Asymptotically efficient</li><li>Has minimum variance</li><li>Independent of sample</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Under regularity conditions the MLE is consistent and asymptotically efficient, attaining the Cram\'er$-$Rao bound as $n\to\infty$.</p></details></div>
 
 <div class="mcq"><div class="q">5. Invariance property of MLE: if $\hat\theta$ is MLE of $\theta$, then MLE of $g(\theta)$ is:</div>
 <ol class="options"><li>$g(\theta)$</li><li>$g(\hat\theta)$</li><li>$\hat\theta$</li><li>Generally not exists</li></ol>
@@ -729,7 +729,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">7. Cramér–Rao lower bound for variance of unbiased estimator of $\theta$:</div>
 <ol class="options"><li>$1/(n I(\theta))$</li><li>$n I(\theta)$</li><li>$I(\theta)/n$</li><li>$\sigma^2/n$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. For an unbiased estimator of $\theta$, the Cram\'er$-$Rao lower bound is $1/(nI(\theta))$.</p></details></div>
 
 <div class="mcq"><div class="q">8. Fisher information $I(\theta)=E[(\partial\log f/\partial\theta)^2]$ equals:</div>
 <ol class="options"><li>$-E[\partial^2\log f/\partial\theta^2]$</li><li>$E[\partial^2\log f/\partial\theta^2]$</li><li>$\sigma^2$</li><li>$1/\sigma^2$</li></ol>
@@ -749,7 +749,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">12. Rao–Blackwell theorem: conditioning unbiased $W$ on sufficient $T$ yields estimator with:</div>
 <ol class="options"><li>Larger variance</li><li>Smaller (or equal) variance</li><li>Bias</li><li>Same MSE</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Rao$-$Blackwellization never increases variance: $\text{Var}(E(W\mid T))\le\text{Var}(W)$, with equality only if $W$ is already a function of $T$.</p></details></div>
 
 <div class="mcq"><div class="q">13. Lehmann–Scheffé theorem: if $T$ complete sufficient and $h(T)$ unbiased, then $h(T)$ is:</div>
 <ol class="options"><li>Inadmissible</li><li>UMVUE</li><li>Inefficient</li><li>Biased</li></ol>
@@ -765,11 +765,11 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">16. For $U(0,\theta)$, complete sufficient statistic is:</div>
 <ol class="options"><li>$\bar X$</li><li>$X_{(n)}$</li><li>$X_{(1)}$</li><li>$\sum X_i$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. For $U(0,\theta)$ the maximum $X_{(n)}$ is complete sufficient.</p></details></div>
 
 <div class="mcq"><div class="q">17. UMVUE of $\theta$ for $U(0,\theta)$ is:</div>
 <ol class="options"><li>$X_{(n)}$</li><li>$(n+1)X_{(n)}/n$</li><li>$2\bar X$</li><li>$X_{(1)}+X_{(n)}$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Since $E(X_{(n)})=\tfrac{n}{n+1}\theta$, the bias-correcting UMVUE is $\tfrac{n+1}{n}X_{(n)}$.</p></details></div>
 
 <div class="mcq"><div class="q">18. Confidence interval based on pivot $T$ requires $T$'s distribution to be:</div>
 <ol class="options"><li>Free of all parameters</li><li>Normal</li><li>$t$-distributed</li><li>Known</li></ol>
@@ -797,7 +797,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">24. An estimator is consistent if:</div>
 <ol class="options"><li>$T_n\xrightarrow{P}\theta$</li><li>$T_n\xrightarrow{d}\theta$</li><li>$E(T_n)=\theta$</li><li>$\text{Var}(T_n)=0$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. Consistency means the estimator converges in probability to the parameter: $T_n\xrightarrow{P}\theta$.</p></details></div>
 
 <div class="mcq"><div class="q">25. Sufficient condition for consistency:</div>
 <ol class="options"><li>$E(T_n)\to\theta,\,\text{Var}(T_n)\to 0$</li><li>Unbiasedness only</li><li>Independence</li><li>Normality</li></ol>
@@ -817,7 +817,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">29. Glivenko–Cantelli theorem: $\sup_x|F_n(x)-F(x)|$ converges to 0:</div>
 <ol class="options"><li>In probability only</li><li>Almost surely</li><li>In distribution</li><li>In mean square only</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Glivenko$-$Cantelli gives <em>uniform</em> almost-sure convergence: $\sup_x|F_n(x)-F(x)|\xrightarrow{a.s.}0$.</p></details></div>
 
 <div class="mcq"><div class="q">30. Spearman's $\rho_s$ uses:</div>
 <ol class="options"><li>Raw data</li><li>Ranks</li><li>Squared differences</li><li>Both A and C</li></ol>
@@ -897,13 +897,13 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">49. Two independent unbiased estimators with variances $V_1,V_2$ — best linear combo has variance:</div>
 <ol class="options"><li>$V_1+V_2$</li><li>$V_1 V_2/(V_1+V_2)$</li><li>$(V_1+V_2)/2$</li><li>$\sqrt{V_1V_2}$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Inverse-variance weighting minimises variance: the best linear combination has variance $1/(1/V_1+1/V_2)=V_1V_2/(V_1+V_2)$.</p></details></div>
 
 <div class="mcq"><div class="q">50. For Poisson($\lambda$), MLE of $\lambda$ equals MoM equals:</div>
 <ol class="options"><li>$\bar X$</li><li>$S^2$</li><li>$X_{(n)}$</li><li>$\sum X_i^2/n$</li></ol>
 <details><summary>Show Answer</summary><p>A.</p></details></div>
 
-<!-- ============================ UNIT 5 ============================ -->
+<!-- ============================ UNIT 5 ============================ -->5
 <div class="mcq-unit-head" id="unit5">
 <h2>Unit 5 — Testing of Hypotheses (50 MCQs)</h2>
 <p>NP lemma, UMP/UMPU/UMPI, LRT, SPRT, chi-square, rank tests.</p>
@@ -919,7 +919,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">3. Neyman–Pearson lemma is for:</div>
 <ol class="options"><li>Composite vs simple</li><li>Simple vs simple</li><li>Two-sided tests</li><li>Sequential tests</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. The Neyman$-$Pearson lemma gives the most powerful test only for a simple null against a simple alternative.</p></details></div>
 
 <div class="mcq"><div class="q">4. NP-MP critical region is based on:</div>
 <ol class="options"><li>$\bar X$</li><li>Likelihood ratio $\ge k$</li><li>Variance</li><li>Sample range</li></ol>
@@ -927,7 +927,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">5. Monotone likelihood ratio in $T$ implies existence of UMP for:</div>
 <ol class="options"><li>$H_0:\theta\le\theta_0$ vs $H_1:\theta&gt;\theta_0$</li><li>Two-sided</li><li>Any test</li><li>Only simple-simple</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. A monotone likelihood ratio in $T$ yields (Karlin$-$Rubin) a UMP one-sided test rejecting for large $T$.</p></details></div>
 
 <div class="mcq"><div class="q">6. Karlin–Rubin theorem requires:</div>
 <ol class="options"><li>Symmetry</li><li>MLR</li><li>Sufficient stat</li><li>Normal distribution</li></ol>
@@ -935,7 +935,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">7. For two-sided test, UMP usually:</div>
 <ol class="options"><li>Exists</li><li>Does not exist</li><li>Equals LRT</li><li>Is sign test</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Two-sided tests generally admit no UMP test; the optimal choice within unbiased tests is the UMPU test.</p></details></div>
 
 <div class="mcq"><div class="q">8. UMPU stands for:</div>
 <ol class="options"><li>Uniformly Most Powerful Unbiased</li><li>Uniformly Most Powerful Universal</li><li>Unbiased Most Powerful Universal</li><li>None</li></ol>
@@ -947,7 +947,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">10. Wilks' theorem: $-2\log\Lambda\to$</div>
 <ol class="options"><li>$N(0,1)$</li><li>$\chi^2_r$</li><li>$\chi^2_{n-1}$</li><li>$F$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Wilks' theorem: $-2\log\Lambda\xrightarrow{d}\chi^2_r$ with $r=\dim\Theta-\dim\Theta_0$.</p></details></div>
 
 <div class="mcq"><div class="q">11. One-sample $t$-test for $H_0:\mu=\mu_0$ uses statistic:</div>
 <ol class="options"><li>$(\bar X-\mu_0)/(S/\sqrt n)\sim t_{n-1}$</li><li>$\bar X\sim N$</li><li>$\chi^2$</li><li>$F$</li></ol>
@@ -971,11 +971,11 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">16. Chi-square goodness-of-fit with $k$ cells and $r$ params estimated has df:</div>
 <ol class="options"><li>$k$</li><li>$k-1$</li><li>$k-1-r$</li><li>$k-r$</li></ol>
-<details><summary>Show Answer</summary><p>C.</p></details></div>
+<details><summary>Show Answer</summary><p>C. Goodness-of-fit df $=k-1-r$: one lost for the total constraint and $r$ for parameters estimated from the data.</p></details></div>
 
 <div class="mcq"><div class="q">17. Chi-square test of independence in $r\times c$ table has df:</div>
 <ol class="options"><li>$rc-1$</li><li>$(r-1)(c-1)$</li><li>$rc$</li><li>$r+c-2$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. For an $r\times c$ table, the test of independence has $(r-1)(c-1)$ degrees of freedom.</p></details></div>
 
 <div class="mcq"><div class="q">18. Yates' continuity correction is applied for:</div>
 <ol class="options"><li>$2\times 2$ tables</li><li>Large samples</li><li>Multinomial</li><li>One-sample</li></ol>
@@ -1055,7 +1055,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">37. Wald, LRT, Score test are:</div>
 <ol class="options"><li>Identical in small samples</li><li>Asymptotically equivalent under $H_0$</li><li>Always different</li><li>Equal to $t$-test</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. The Wald, likelihood-ratio and Rao score tests are asymptotically equivalent under $H_0$ (and under local alternatives).</p></details></div>
 
 <div class="mcq"><div class="q">38. For chi-square independence in $2\times 2$ table, df is:</div>
 <ol class="options"><li>1</li><li>2</li><li>3</li><li>4</li></ol>
@@ -1083,7 +1083,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">44. For Mann–Whitney, under $H_0,\,E(U)=$</div>
 <ol class="options"><li>$mn/2$</li><li>$mn$</li><li>$m+n$</li><li>$mn(m+n+1)/12$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. Under $H_0$ (identical distributions), the Mann$-$Whitney statistic has mean $E(U)=mn/2$.</p></details></div>
 
 <div class="mcq"><div class="q">45. Var$(U)$ in Mann–Whitney:</div>
 <ol class="options"><li>$mn(m+n+1)/12$</li><li>$mn/2$</li><li>$mn$</li><li>$(m+n)/12$</li></ol>
@@ -1109,7 +1109,7 @@ window.MathJax = {
 <ol class="options"><li>Binomial distribution</li><li>Normal approximation</li><li>Both A and B (depending on $n$)</li><li>$t$ test</li></ol>
 <details><summary>Show Answer</summary><p>C.</p></details></div>
 
-<!-- ============================ UNIT 6 ============================ -->
+<!-- ============================ UNIT 6 ============================ -->6
 <div class="mcq-unit-head" id="unit6">
 <h2>Unit 6 — Linear Estimation, Regression &amp; Econometrics (50 MCQs)</h2>
 <p>OLS, GLS, Gauss–Markov, multicollinearity, heteroscedasticity, autocorrelation, IV, 2SLS.</p>
@@ -1117,7 +1117,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">1. Under Gauss–Markov assumptions, OLS is:</div>
 <ol class="options"><li>BLUE</li><li>MVUE always</li><li>Biased</li><li>Inconsistent</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. Under the Gauss$-$Markov assumptions OLS is BLUE $-$ minimum variance among all linear unbiased estimators.</p></details></div>
 
 <div class="mcq"><div class="q">2. The OLS estimator of $\boldsymbol\beta$ is:</div>
 <ol class="options"><li>$(X'X)^{-1}X'y$</li><li>$X'y$</li><li>$X(X'X)^{-1}y$</li><li>$y'X$</li></ol>
@@ -1125,7 +1125,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">3. Hat matrix $H=X(X'X)^{-1}X'$ has trace equal to:</div>
 <ol class="options"><li>$n$</li><li>$p$ (number of parameters)</li><li>1</li><li>0</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. $\text{tr}(H)=\text{tr}(X(X'X)^{-1}X')=\text{tr}(I_p)=p$, the number of estimated parameters.</p></details></div>
 
 <div class="mcq"><div class="q">4. Unbiased estimator of $\sigma^2$ in linear model:</div>
 <ol class="options"><li>SSE/$n$</li><li>SSE/$(n-p)$</li><li>SSE/$p$</li><li>SST/$n$</li></ol>
@@ -1141,7 +1141,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">7. Adjusted $R^2$ formula:</div>
 <ol class="options"><li>$1-(1-R^2)(n-1)/(n-p)$</li><li>$R^2/n$</li><li>$1-R^2/n$</li><li>$(1-R^2)p$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. $R^2_{adj}=1-(1-R^2)\dfrac{n-1}{n-p}$; unlike $R^2$ it can fall when a useless predictor is added.</p></details></div>
 
 <div class="mcq"><div class="q">8. The slope $\hat\beta_1$ in simple linear regression equals:</div>
 <ol class="options"><li>$S_{xy}/S_{xx}$</li><li>$\bar y/\bar x$</li><li>$r\cdot s_y/s_x$ (correlation form)</li><li>Both A and C</li></ol>
@@ -1165,7 +1165,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">13. Heteroscedasticity makes OLS:</div>
 <ol class="options"><li>Biased</li><li>Inefficient but unbiased</li><li>Inconsistent</li><li>BLUE</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Heteroscedasticity leaves OLS unbiased and consistent but no longer efficient, and the usual standard errors are biased.</p></details></div>
 
 <div class="mcq"><div class="q">14. Breusch–Pagan test for heteroscedasticity uses:</div>
 <ol class="options"><li>$nR^2$ of $\hat e^2$ on $X$</li><li>$F$ stat</li><li>$\chi^2_{n-1}$</li><li>Sign test</li></ol>
@@ -1181,7 +1181,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">17. Durbin–Watson statistic close to 2 indicates:</div>
 <ol class="options"><li>Positive autocorrelation</li><li>Negative autocorrelation</li><li>No autocorrelation</li><li>Heteroscedasticity</li></ol>
-<details><summary>Show Answer</summary><p>C.</p></details></div>
+<details><summary>Show Answer</summary><p>C. $d\approx 2(1-\hat\rho)$, so $d\approx 2$ corresponds to $\hat\rho\approx 0$, i.e. no first-order autocorrelation.</p></details></div>
 
 <div class="mcq"><div class="q">18. Durbin–Watson $d\approx 2(1-\hat\rho)$ where $\hat\rho$ is:</div>
 <ol class="options"><li>Sample correlation of residuals</li><li>Mean residual</li><li>$\sigma^2$</li><li>$R^2$</li></ol>
@@ -1217,7 +1217,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">26. Errors-in-variables model results in OLS:</div>
 <ol class="options"><li>Unbiased</li><li>Attenuation bias toward 0</li><li>Inflated slope</li><li>Zero variance</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. Classical measurement error in $X$ attenuates the slope toward zero by the factor $\sigma_X^2/(\sigma_X^2+\sigma_u^2)$.</p></details></div>
 
 <div class="mcq"><div class="q">27. Instrumental Variable estimator $\hat\beta_{IV}=$</div>
 <ol class="options"><li>$(Z'X)^{-1}Z'y$</li><li>$(X'X)^{-1}X'y$</li><li>$(X'Z)^{-1}X'y$</li><li>$Z'y$</li></ol>
@@ -1233,7 +1233,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">30. In simultaneous equations, equation is exactly identified iff:</div>
 <ol class="options"><li>$K-k=m-1$</li><li>$K-k&gt;m-1$</li><li>$K-k&lt;m-1$</li><li>$K=k$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. The order condition for exact identification is $K-k=m-1$ (excluded exogenous variables just match included endogenous ones).</p></details></div>
 
 <div class="mcq"><div class="q">31. Over-identified equation has:</div>
 <ol class="options"><li>$K-k\gt m-1$</li><li>$K-k=m-1$</li><li>$K-k\lt m-1$</li><li>No instruments</li></ol>
@@ -1309,13 +1309,13 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">49. With $n=p$, $R^2$ equals:</div>
 <ol class="options"><li>0</li><li>1 (perfect fit)</li><li>0.5</li><li>Undefined</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. With $n=p$ the fitted plane passes through every point, so SSE $=0$ and $R^2=1$ (perfect but meaningless fit).</p></details></div>
 
 <div class="mcq"><div class="q">50. Endogeneity arises if:</div>
 <ol class="options"><li>$\text{Cov}(X,\varepsilon)\ne 0$</li><li>$X$ correlated with $Y$</li><li>Errors normal</li><li>$E(\varepsilon)=0$</li></ol>
 <details><summary>Show Answer</summary><p>A.</p></details></div>
 
-<!-- ============================ UNIT 7 ============================ -->
+<!-- ============================ UNIT 7 ============================ -->7
 <div class="mcq-unit-head" id="unit7">
 <h2>Unit 7 — Time Series (50 MCQs)</h2>
 <p>ACF, PACF, stationarity, AR, MA, ARMA, ARIMA, spectral density.</p>
@@ -1339,11 +1339,11 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">5. ACF of MA($q$) cuts off after lag:</div>
 <ol class="options"><li>$q$</li><li>$q-1$</li><li>$q+1$</li><li>Never</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. An MA($q$) has ACF that cuts off after lag $q$, while its PACF tails off $-$ the identifying signature of MA models.</p></details></div>
 
 <div class="mcq"><div class="q">6. PACF of AR($p$) cuts off after lag:</div>
 <ol class="options"><li>$p-1$</li><li>$p$</li><li>$p+1$</li><li>Never</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. An AR($p$) has PACF that cuts off after lag $p$, while its ACF tails off.</p></details></div>
 
 <div class="mcq"><div class="q">7. For AR(1) $\phi=0.5$, $\rho_k=$</div>
 <ol class="options"><li>$0.5$</li><li>$0.5^k$</li><li>$1$</li><li>$0$</li></ol>
@@ -1351,7 +1351,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">8. AR(1) is stationary iff:</div>
 <ol class="options"><li>$|\phi|=1$</li><li>$|\phi|&lt;1$</li><li>$\phi&gt;0$</li><li>$\phi&lt;0$</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. AR(1) is stationary iff $|\phi|<1$, equivalently the root of $1-\phi B=0$ lies outside the unit circle.</p></details></div>
 
 <div class="mcq"><div class="q">9. MA process is always:</div>
 <ol class="options"><li>Stationary</li><li>Non-stationary</li><li>Invertible</li><li>Both A and C</li></ol>
@@ -1363,7 +1363,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">11. ARMA($p,q$) stationary iff:</div>
 <ol class="options"><li>Roots of MA polynomial outside unit circle</li><li>Roots of AR polynomial outside unit circle</li><li>Both A and B</li><li>Neither</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. ARMA stationarity depends only on the AR polynomial roots lying outside the unit circle (MA part governs invertibility).</p></details></div>
 
 <div class="mcq"><div class="q">12. ARMA invertible iff:</div>
 <ol class="options"><li>MA roots outside unit circle</li><li>AR roots inside unit circle</li><li>Mean is zero</li><li>None</li></ol>
@@ -1375,7 +1375,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">14. Random walk $Y_t=Y_{t-1}+\varepsilon_t$ has:</div>
 <ol class="options"><li>Stationary process</li><li>Variance growing as $t$</li><li>$E(Y_t)=0$ always</li><li>Both B and C</li></ol>
-<details><summary>Show Answer</summary><p>D.</p></details></div>
+<details><summary>Show Answer</summary><p>D. A random walk is non-stationary: $E(Y_t)=Y_0$ but $\text{Var}(Y_t)=t\sigma^2$ grows without bound.</p></details></div>
 
 <div class="mcq"><div class="q">15. ARIMA$(p,d,q)$ becomes stationary after differencing $d$ times. $d$ for random walk is:</div>
 <ol class="options"><li>0</li><li>1</li><li>2</li><li>$\infty$</li></ol>
@@ -1415,7 +1415,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">24. Periodogram is:</div>
 <ol class="options"><li>Consistent estimator of spectral density</li><li>Inconsistent estimator</li><li>Always zero</li><li>Sufficient stat</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. The raw periodogram is asymptotically unbiased but inconsistent $-$ its variance does not shrink as $T$ grows, so it must be smoothed.</p></details></div>
 
 <div class="mcq"><div class="q">25. Smoothing periodogram with window reduces:</div>
 <ol class="options"><li>Bias</li><li>Variance</li><li>Mean</li><li>Resolution alone</li></ol>
@@ -1423,7 +1423,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">26. AR(1) spectral density peaks at:</div>
 <ol class="options"><li>$\omega=0$ if $\phi&gt;0$</li><li>$\omega=\pi$ if $\phi&gt;0$</li><li>$\omega=\pi/2$</li><li>Always at 0</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. AR(1) with $\phi>0$ concentrates spectral power at low frequencies, giving a spectral-density peak at $\omega=0$.</p></details></div>
 
 <div class="mcq"><div class="q">27. AR(1) with $\phi&lt;0$ peaks at:</div>
 <ol class="options"><li>$\omega=0$</li><li>$\omega=\pi$</li><li>$\omega=\pi/2$</li><li>None</li></ol>
@@ -1443,7 +1443,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">31. Exponential smoothing is optimal for which ARIMA:</div>
 <ol class="options"><li>ARIMA(0,1,1)</li><li>ARIMA(1,0,0)</li><li>ARIMA(1,1,1)</li><li>ARIMA(0,0,0)</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. Simple exponential smoothing is the optimal (minimum-MSE) forecast for an ARIMA(0,1,1) process.</p></details></div>
 
 <div class="mcq"><div class="q">32. Seasonal ARIMA notation includes:</div>
 <ol class="options"><li>$(p,d,q)\times(P,D,Q)_s$</li><li>$(p,d,q)$</li><li>$(P,D,Q)$</li><li>$(p,q)$</li></ol>
@@ -1521,7 +1521,7 @@ window.MathJax = {
 <ol class="options"><li>Adequate model fit</li><li>Inadequate</li><li>Non-stationary</li><li>Heteroscedastic</li></ol>
 <details><summary>Show Answer</summary><p>A.</p></details></div>
 
-<!-- ============================ UNIT 8 ============================ -->
+<!-- ============================ UNIT 8 ============================ -->8
 <div class="mcq-unit-head" id="unit8">
 <h2>Unit 8 — Multivariate Analysis (50 MCQs)</h2>
 <p>MVN, Wishart, Hotelling's $T^2$, PCA, discriminant, canonical correlation.</p>
@@ -1537,7 +1537,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">3. For jointly normal $(X,Y)$, $\text{Cov}(X,Y)=0$ implies:</div>
 <ol class="options"><li>Uncorrelated but dependent</li><li>Independence</li><li>Linear dependence</li><li>Cannot say</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. For jointly normal variables, zero covariance implies full independence (a property special to the normal).</p></details></div>
 
 <div class="mcq"><div class="q">4. Conditional distribution of $X_1\mid X_2=x_2$ for MVN is:</div>
 <ol class="options"><li>Normal</li><li>Uniform</li><li>Cauchy</li><li>None</li></ol>
@@ -1549,7 +1549,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">6. $(\mathbf X-\mu)'\Sigma^{-1}(\mathbf X-\mu)\sim$</div>
 <ol class="options"><li>$\chi^2_p$</li><li>$\chi^2_n$</li><li>$F$</li><li>$N$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. $(\mathbf X-\mu)'\Sigma^{-1}(\mathbf X-\mu)\sim\chi^2_p$; this quadratic form is the squared Mahalanobis distance.</p></details></div>
 
 <div class="mcq"><div class="q">7. Sample mean vector $\bar{\mathbf X}$ from iid $N_p(\mu,\Sigma)$:</div>
 <ol class="options"><li>$N_p(\mu,\Sigma/n)$</li><li>$N_p(\mu,\Sigma)$</li><li>$N_p(0,\Sigma)$</li><li>$\chi^2$</li></ol>
@@ -1561,7 +1561,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">9. $(n-1)\mathbf S$ has distribution:</div>
 <ol class="options"><li>$W_p(n-1,\Sigma)$</li><li>$W_p(n,\Sigma)$</li><li>$\chi^2_{n-1}$</li><li>$F$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. $(n-1)\mathbf S\sim W_p(n-1,\Sigma)$ $-$ the multivariate analogue of $(n-1)S^2/\sigma^2\sim\chi^2_{n-1}$.</p></details></div>
 
 <div class="mcq"><div class="q">10. Wishart distribution is:</div>
 <ol class="options"><li>Univariate</li><li>Multivariate generalization of $\chi^2$</li><li>Discrete</li><li>Discrete normal</li></ol>
@@ -1569,7 +1569,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">11. Hotelling's $T^2$ relates to $F$ as:</div>
 <ol class="options"><li>$\frac{n-p}{p(n-1)}T^2\sim F_{p,n-p}$</li><li>$T^2\sim F$</li><li>$T\sim t$</li><li>$T^2=\chi^2$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. $\dfrac{n-p}{p(n-1)}T^2\sim F_{p,n-p}$, which is how $T^2$ is referred to critical values.</p></details></div>
 
 <div class="mcq"><div class="q">12. For $p=1$, Hotelling's $T^2$ reduces to:</div>
 <ol class="options"><li>$t^2$</li><li>$z^2$</li><li>$F$</li><li>$\chi^2$</li></ol>
@@ -1585,7 +1585,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">15. Misclassification probability for equal-prior LDA is:</div>
 <ol class="options"><li>$\Phi(-D/2)$</li><li>$1/2$</li><li>$\Phi(D)$</li><li>$\Phi(D^2)$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. With equal priors the optimal error rate is $\Phi(-D/2)$, decreasing as the Mahalanobis separation $D$ grows.</p></details></div>
 
 <div class="mcq"><div class="q">16. PCA finds:</div>
 <ol class="options"><li>Eigenvectors of covariance matrix</li><li>Eigenvalues of correlation matrix only</li><li>Largest singular value of $X$</li><li>All of the above</li></ol>
@@ -1613,7 +1613,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">22. Number of canonical correlations: $k=$</div>
 <ol class="options"><li>$\min(p,q)$</li><li>$\max(p,q)$</li><li>$p+q$</li><li>$pq$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. There are $\min(p,q)$ canonical correlations between the two variable sets.</p></details></div>
 
 <div class="mcq"><div class="q">23. CCA reduces to multiple correlation when:</div>
 <ol class="options"><li>$q=1$</li><li>$p=1$</li><li>$p=q$</li><li>Both A and B</li></ol>
@@ -1669,7 +1669,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">36. Kaiser criterion in PCA: retain PCs with eigenvalues:</div>
 <ol class="options"><li>$&gt;1$</li><li>$&gt;0$</li><li>$&gt;0.5$</li><li>$&gt;2$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. Kaiser's rule retains principal components with eigenvalue $>1$ (on the correlation matrix, whose eigenvalues average $1$).</p></details></div>
 
 <div class="mcq"><div class="q">37. Loading of variable $X_j$ on PC $Y_i$:</div>
 <ol class="options"><li>$e_{ij}\sqrt{\lambda_i}/\sqrt{\sigma_{jj}}$</li><li>$\lambda_i$</li><li>$e_{ij}$</li><li>$\sqrt{\lambda_i}$</li></ol>
@@ -1709,7 +1709,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">46. Sum of all eigenvalues of correlation matrix equals:</div>
 <ol class="options"><li>$p$</li><li>1</li><li>$n$</li><li>$p(p-1)/2$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. A $p\times p$ correlation matrix has trace $p$, so its eigenvalues sum to $p$.</p></details></div>
 
 <div class="mcq"><div class="q">47. The first eigenvector in PCA corresponds to:</div>
 <ol class="options"><li>Smallest eigenvalue</li><li>Largest eigenvalue</li><li>Mean</li><li>Median</li></ol>
@@ -1727,7 +1727,7 @@ window.MathJax = {
 <ol class="options"><li>P. C. Mahalanobis</li><li>C. R. Rao</li><li>R. A. Fisher</li><li>R. C. Bose</li></ol>
 <details><summary>Show Answer</summary><p>A.</p></details></div>
 
-<!-- ============================ UNIT 9 ============================ -->
+<!-- ============================ UNIT 9 ============================ -->9
 <div class="mcq-unit-head" id="unit9">
 <h2>Unit 9 — Stochastic Processes (50 MCQs)</h2>
 <p>Markov chains, Chapman–Kolmogorov, random walks, Poisson processes, queues.</p>
@@ -1763,11 +1763,11 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">8. Symmetric simple random walk on $\mathbb Z$ is:</div>
 <ol class="options"><li>Transient</li><li>Positive recurrent</li><li>Null recurrent</li><li>Ergodic</li></ol>
-<details><summary>Show Answer</summary><p>C.</p></details></div>
+<details><summary>Show Answer</summary><p>C. The symmetric random walk on $\mathbb Z$ returns to the origin with probability 1 but has infinite expected return time $-$ null recurrent.</p></details></div>
 
 <div class="mcq"><div class="q">9. Random walk on $\mathbb Z^d$ for $d\ge 3$ is:</div>
 <ol class="options"><li>Recurrent</li><li>Transient</li><li>Periodic</li><li>None</li></ol>
-<details><summary>Show Answer</summary><p>B. Pólya.</p></details></div>
+<details><summary>Show Answer</summary><p>B. P\'olya's theorem: the symmetric walk is recurrent in dimensions 1 and 2 but transient for $d\ge 3$.</p></details></div>
 
 <div class="mcq"><div class="q">10. Period of state $i$: $d(i)=$</div>
 <ol class="options"><li>$\gcd\{n\ge 1: p_{ii}^{(n)}&gt;0\}$</li><li>$\text{lcm}$</li><li>$\min$</li><li>$\max$</li></ol>
@@ -1779,7 +1779,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">12. Gambler's ruin with fair coin, starting $i$ out of $N$: $P(\text{ruin})=$</div>
 <ol class="options"><li>$(N-i)/N$</li><li>$i/N$</li><li>1/2</li><li>0</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. In a fair game the ruin probability is $(N-i)/N$, linear in the distance from the target $N$.</p></details></div>
 
 <div class="mcq"><div class="q">13. Expected duration in fair gambler's ruin from $i$:</div>
 <ol class="options"><li>$i(N-i)$</li><li>$iN$</li><li>$N^2$</li><li>$\infty$</li></ol>
@@ -1827,11 +1827,11 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">24. M/M/1 stationary distribution exists iff:</div>
 <ol class="options"><li>$\rho&gt;1$</li><li>$\rho&lt;1$</li><li>$\rho=1$</li><li>Always</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. M/M/1 has a stationary distribution iff the traffic intensity $\rho=\lambda/\mu<1$ (arrivals slower than service).</p></details></div>
 
 <div class="mcq"><div class="q">25. Stationary distribution of M/M/1: $\pi_n=$</div>
 <ol class="options"><li>$(1-\rho)\rho^n$</li><li>$\rho^n$</li><li>$1/n$</li><li>$e^{-\rho}\rho^n/n!$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. The stationary queue length is geometric: $\pi_n=(1-\rho)\rho^n$.</p></details></div>
 
 <div class="mcq"><div class="q">26. Average number in M/M/1 system:</div>
 <ol class="options"><li>$\rho/(1-\rho)$</li><li>$\rho$</li><li>$\lambda$</li><li>$1/(1-\rho)$</li></ol>
@@ -1843,7 +1843,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">28. Little's Law: $L=$</div>
 <ol class="options"><li>$\lambda W$</li><li>$W/\lambda$</li><li>$\lambda+W$</li><li>$\lambda^2 W$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. Little's Law: $L=\lambda W$ $-$ mean number in system equals arrival rate times mean time in system.</p></details></div>
 
 <div class="mcq"><div class="q">29. Merging two independent Poisson processes with rates $\lambda_1,\lambda_2$ gives:</div>
 <ol class="options"><li>Poisson with rate $\lambda_1+\lambda_2$</li><li>Poisson with $\lambda_1\lambda_2$</li><li>Not Poisson</li><li>Exponential</li></ol>
@@ -1867,7 +1867,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">34. Mean return time in irreducible positive recurrent chain: $\mu_{jj}=$</div>
 <ol class="options"><li>$1/\pi_j$</li><li>$\pi_j$</li><li>1</li><li>$\infty$</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. For an ergodic chain the mean recurrence time is the reciprocal of the stationary probability: $\mu_{jj}=1/\pi_j$.</p></details></div>
 
 <div class="mcq"><div class="q">35. Markov chain with two states $\{0,1\}$ and $p_{01}=p,p_{10}=q$: stationary $\pi_1=$</div>
 <ol class="options"><li>$p/(p+q)$</li><li>$q/(p+q)$</li><li>1/2</li><li>$pq$</li></ol>
@@ -1891,7 +1891,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">40. Branching process: extinction certain iff:</div>
 <ol class="options"><li>$\mu\le 1$</li><li>$\mu&gt;1$</li><li>$\mu=0$</li><li>Always</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. A branching process becomes extinct with probability 1 iff the mean number of offspring $\mu\le 1$ (subcritical or critical).</p></details></div>
 
 <div class="mcq"><div class="q">41. Brownian motion is a:</div>
 <ol class="options"><li>Continuous Gaussian process with stationary independent increments</li><li>Discrete</li><li>Periodic</li><li>Deterministic</li></ol>
@@ -1933,7 +1933,7 @@ window.MathJax = {
 <ol class="options"><li>Dependent</li><li>Independent</li><li>Equal</li><li>Always 1</li></ol>
 <details><summary>Show Answer</summary><p>B.</p></details></div>
 
-<!-- ============================ UNIT 10 ============================ -->
+<!-- ============================ UNIT 10 ============================ -->10
 <div class="mcq-unit-head" id="unit10">
 <h2>Unit 10 — Indian Statistical System &amp; Research Methodology (50 MCQs)</h2>
 <p>MoSPI, NSC, NSO, census, Indian statisticians, R, LaTeX.</p>
@@ -1949,7 +1949,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">3. NSO was formed in 2019 by merging:</div>
 <ol class="options"><li>CSO and NSSO</li><li>NSC and CSO</li><li>NSSO and DGCIS</li><li>RBI and NSC</li></ol>
-<details><summary>Show Answer</summary><p>A.</p></details></div>
+<details><summary>Show Answer</summary><p>A. The NSO was created in 2019 by merging the Central Statistics Office (CSO) and the National Sample Survey Office (NSSO).</p></details></div>
 
 <div class="mcq"><div class="q">4. Indian Statistical Institute was founded by:</div>
 <ol class="options"><li>R. A. Fisher</li><li>P. C. Mahalanobis</li><li>C. R. Rao</li><li>R. C. Bose</li></ol>
@@ -1969,7 +1969,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">8. Rao–Cramer inequality is attributed to:</div>
 <ol class="options"><li>R. A. Fisher</li><li>C. R. Rao</li><li>Harald Cramér</li><li>Both B and C</li></ol>
-<details><summary>Show Answer</summary><p>D.</p></details></div>
+<details><summary>Show Answer</summary><p>D. The Cram\'er$-$Rao inequality is credited jointly to C. R. Rao and Harald Cram\'er, who derived it independently.</p></details></div>
 
 <div class="mcq"><div class="q">9. Rao–Blackwell theorem is named after:</div>
 <ol class="options"><li>C. R. Rao and David Blackwell</li><li>Rao and Bose</li><li>Rao and Fisher</li><li>Blackwell and Fisher</li></ol>
@@ -1993,7 +1993,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">14. C. R. Rao received the International Prize in Statistics in:</div>
 <ol class="options"><li>2010</li><li>2015</li><li>2023</li><li>2020</li></ol>
-<details><summary>Show Answer</summary><p>C.</p></details></div>
+<details><summary>Show Answer</summary><p>C. C. R. Rao received the International Prize in Statistics in 2023, shortly before his death.</p></details></div>
 
 <div class="mcq"><div class="q">15. Census of India is conducted every:</div>
 <ol class="options"><li>5 years</li><li>10 years</li><li>20 years</li><li>1 year</li></ol>
@@ -2017,7 +2017,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">20. ASI is conducted under which Act?</div>
 <ol class="options"><li>Census Act 1948</li><li>Collection of Statistics Act 2008</li><li>RTI Act 2005</li><li>IT Act 2000</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. The Annual Survey of Industries is conducted under the Collection of Statistics Act, 2008.</p></details></div>
 
 <div class="mcq"><div class="q">21. R was developed by:</div>
 <ol class="options"><li>Ihaka and Gentleman</li><li>Bell Labs</li><li>Knuth</li><li>Stallman</li></ol>
@@ -2025,7 +2025,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">22. In R, assignment operator is:</div>
 <ol class="options"><li>$=$</li><li>$&lt;-$</li><li>$\rightarrow$</li><li>All of the above</li></ol>
-<details><summary>Show Answer</summary><p>D.</p></details></div>
+<details><summary>Show Answer</summary><p>D. R accepts <code>&lt;-</code>, <code>=</code> and <code>-&gt;</code> for assignment (<code>&lt;-</code> is idiomatic).</p></details></div>
 
 <div class="mcq"><div class="q">23. Matrix multiplication in R uses:</div>
 <ol class="options"><li>$*$</li><li>%*%</li><li>$\times$</li><li>matmul()</li></ol>
@@ -2129,7 +2129,7 @@ window.MathJax = {
 
 <div class="mcq"><div class="q">48. The base year for current GDP series (as of 2024) is:</div>
 <ol class="options"><li>2004-05</li><li>2011-12</li><li>2018-19</li><li>2020-21</li></ol>
-<details><summary>Show Answer</summary><p>B.</p></details></div>
+<details><summary>Show Answer</summary><p>B. India's current national-accounts / GDP series uses base year 2011-12.</p></details></div>
 
 <div class="mcq"><div class="q">49. R Markdown combines:</div>
 <ol class="options"><li>R code with Markdown text</li><li>R with LaTeX only</li><li>HTML only</li><li>Word and R</li></ol>

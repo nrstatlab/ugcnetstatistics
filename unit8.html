@@ -151,6 +151,8 @@ For known $\Sigma$, 100(1-$\alpha$)% confidence ellipsoid for $\boldsymbol\mu$: 
 If $\mathbf Z_1,\ldots,\mathbf Z_n\overset{\text{iid}}{\sim}N_p(\mathbf 0,\Sigma)$, then $\mathbf W=\sum\mathbf Z_i\mathbf Z_i^T\sim W_p(n,\Sigma).$
 </div>
 
+<p><strong>Intuition.</strong> The Wishart is the multivariate generalization of the $\chi^2$: just as $\sum Z_i^2\sim\sigma^2\chi^2_n$ governs the sample variance in one dimension, $\sum\mathbf Z_i\mathbf Z_i^T$ governs the sample <em>covariance matrix</em>. It is therefore the distribution sitting behind Hotelling's $T^2$, MANOVA, and every inference about $\Sigma$.</p>
+
 <h3>Properties</h3>
 <ul>
 <li>If $\mathbf X_i\overset{\text{iid}}{\sim}N_p(\boldsymbol\mu,\Sigma)$, then $(n-1)\mathbf S\sim W_p(n-1,\Sigma).$</li>
