@@ -290,7 +290,7 @@ Bernoulli$(p)$, want UMVUE of $p^2.$ $X_1 X_2$ is unbiased; $T=\sum X_i$ suffici
 
 <div class="example">
 <span class="ex-label">EXAMPLE 2</span>
-$X_i\sim$ Poisson$(\lambda),$ unbiased estimator of $e^{-\lambda}$: $W=I(X_1=0).$ $T=\sum X_i$ sufficient. $E(W\mid T=t)=\binom{n-1}{n}^t\cdot\frac{1}{n^t}\cdot\binom{t}{0}=(1-1/n)^t.$
+$X_i\sim$ Poisson$(\lambda),$ unbiased estimator of $e^{-\lambda}$: $W=I(X_1=0).$ $T=\sum X_i$ sufficient. Since $X_1\mid T=t\sim$ Bin$(t,1/n)$, $E(W\mid T=t)=P(X_1=0\mid T=t)=\left(\frac{n-1}{n}\right)^t=(1-1/n)^t.$
 </div>
 
 <h2 id="ls">11. Lehmann–Scheffé Theorem</h2>
