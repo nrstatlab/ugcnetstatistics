@@ -98,6 +98,29 @@ window.MathJax = {
 </div>
 
 <p><strong>Common misconception.</strong> The $p$-value is <em>not</em> $P(H_0\text{ is true})$ and it is not the probability the result is due to chance. It is computed <em>assuming</em> $H_0$ holds: it answers &ldquo;if $H_0$ were true, how surprising would data this extreme be?&rdquo; A small $p$-value means the observed data sit far in the tail of the null distribution.</p>
+<div class="diagram">
+<svg viewBox="0 0 680 330" role="img" aria-label="Type I and Type II errors">
+<path d="M360.0,260 L360.0,191.3 L366.7,179.0 L373.3,166.1 L380.0,152.9 L386.7,139.9 L393.3,127.4 L400.0,116.1 L406.7,106.3 L413.3,98.5 L420.0,93.1 L426.7,90.3 L433.3,90.3 L440.0,93.1 L446.7,98.5 L453.3,106.3 L460.0,116.1 L466.7,127.4 L473.3,139.9 L480.0,152.9 L486.7,166.1 L493.3,179.0 L500.0,191.3 L506.7,202.7 L513.3,212.9 L520.0,222.0 L526.7,229.8 L533.3,236.4 L540.0,241.9 L546.7,246.3 L553.3,249.8 L560.0,252.5 L566.7,254.6 L573.3,256.2 L580.0,257.3 L586.7,258.2 L593.3,258.8 L600.0,259.2 L606.7,259.5 L613.3,259.7 L620.0,259.8 L626.7,259.9 L633.3,259.9 L640.0,260.0 L640.0,260 Z" fill="#f59e0b" opacity="0.18"/>
+<path d="M240.0,260 L240.0,259.8 L246.7,259.7 L253.3,259.5 L260.0,259.2 L266.7,258.8 L273.3,258.2 L280.0,257.3 L286.7,256.2 L293.3,254.6 L300.0,252.5 L306.7,249.8 L313.3,246.3 L320.0,241.9 L326.7,236.4 L333.3,229.8 L340.0,222.0 L346.7,212.9 L353.3,202.7 L360.0,191.3 L360.0,260 Z" fill="#475569" opacity="0.35"/>
+<path d="M362.5,260 L362.5,243.6 L369.7,248.0 L376.8,251.3 L384.0,253.9 L391.2,255.7 L398.3,257.1 L405.5,258.1 L412.7,258.7 L419.8,259.2 L427.0,259.5 L434.2,259.7 L441.3,259.8 L448.5,259.9 L455.7,259.9 L462.8,260.0 L470.0,260.0 L470.0,260 Z" fill="#ef4444" opacity="0.45"/>
+<path d="M40.0,260.0 L47.2,259.9 L54.3,259.9 L61.5,259.8 L68.7,259.6 L75.8,259.4 L83.0,259.0 L90.2,258.5 L97.3,257.7 L104.5,256.6 L111.7,255.1 L118.8,252.9 L126.0,250.1 L133.2,246.4 L140.3,241.6 L147.5,235.6 L154.7,228.3 L161.8,219.6 L169.0,209.5 L176.2,198.0 L183.3,185.3 L190.5,171.7 L197.7,157.6 L204.8,143.4 L212.0,129.8 L219.2,117.4 L226.3,106.7 L233.5,98.3 L240.7,92.7 L247.8,90.1 L255.0,90.8 L262.2,94.6 L269.3,101.4 L276.5,110.7 L283.7,122.1 L290.8,135.1 L298.0,149.0 L305.2,163.2 L312.3,177.1 L319.5,190.4 L326.7,202.7 L333.8,213.6 L341.0,223.2 L348.2,231.4 L355.3,238.2 L362.5,243.6 L369.7,248.0 L376.8,251.3 L384.0,253.9 L391.2,255.7 L398.3,257.1 L405.5,258.1 L412.7,258.7 L419.8,259.2 L427.0,259.5 L434.2,259.7 L441.3,259.8 L448.5,259.9 L455.7,259.9 L462.8,260.0 L470.0,260.0" fill="none" stroke="#1e3a8a" stroke-width="2.5"/>
+<path d="M240.0,259.8 L246.7,259.7 L253.3,259.5 L260.0,259.2 L266.7,258.8 L273.3,258.2 L280.0,257.3 L286.7,256.2 L293.3,254.6 L300.0,252.5 L306.7,249.8 L313.3,246.3 L320.0,241.9 L326.7,236.4 L333.3,229.8 L340.0,222.0 L346.7,212.9 L353.3,202.7 L360.0,191.3 L366.7,179.0 L373.3,166.1 L380.0,152.9 L386.7,139.9 L393.3,127.4 L400.0,116.1 L406.7,106.3 L413.3,98.5 L420.0,93.1 L426.7,90.3 L433.3,90.3 L440.0,93.1 L446.7,98.5 L453.3,106.3 L460.0,116.1 L466.7,127.4 L473.3,139.9 L480.0,152.9 L486.7,166.1 L493.3,179.0 L500.0,191.3 L506.7,202.7 L513.3,212.9 L520.0,222.0 L526.7,229.8 L533.3,236.4 L540.0,241.9 L546.7,246.3 L553.3,249.8 L560.0,252.5 L566.7,254.6 L573.3,256.2 L580.0,257.3 L586.7,258.2 L593.3,258.8 L600.0,259.2 L606.7,259.5 L613.3,259.7 L620.0,259.8 L626.7,259.9 L633.3,259.9 L640.0,260.0" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+<line x1="40" y1="260" x2="640" y2="260" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="360" y1="70" x2="360" y2="260" stroke="#ef4444" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="360" y="62" font-size="12" fill="#ef4444" text-anchor="middle" font-weight="600">critical value c</text>
+<text x="250" y="80" font-size="13" fill="#1e3a8a" text-anchor="middle" font-weight="700">H₀ true</text>
+<text x="430" y="80" font-size="13" fill="#b45309" text-anchor="middle" font-weight="700">H₁ true</text>
+<text x="405" y="228" font-size="12" fill="#b91c1c" text-anchor="middle" font-weight="700">α</text>
+<text x="330" y="240" font-size="12" fill="#334155" text-anchor="middle" font-weight="700">β</text>
+<text x="470" y="150" font-size="11" fill="#b45309" text-anchor="middle" font-weight="600">power</text>
+<text x="470" y="164" font-size="11" fill="#b45309" text-anchor="middle" font-weight="600">= 1−β</text>
+<text x="150" y="282" font-size="12" fill="#475569" text-anchor="middle">accept H₀</text>
+<text x="510" y="282" font-size="12" fill="#475569" text-anchor="middle">reject H₀ →</text>
+<text x="340" y="22" font-size="14" fill="#0f172a" text-anchor="middle" font-weight="700">Type I (α) and Type II (β) errors</text>
+</svg>
+<div class="cap"><strong>Two error types.</strong> Rejecting H₀ when it is true has probability α (red); failing to reject when H₁ holds has probability β (grey). Moving c trades α against β; the test's <strong>power</strong> is 1−β (orange).</div>
+</div>
+
 
 <h3>Test Function</h3>
 A test is a function $\phi(x)\in[0,1]$: probability of rejection given data. $E_\theta[\phi(X)]=$ power function.

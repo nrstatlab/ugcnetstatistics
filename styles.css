@@ -289,3 +289,15 @@ mjx-container { font-size: 1.05em !important; }
   .topnav { padding: 0.5rem; }
   .topnav a { padding: 0.3rem 0.6rem; font-size: 0.8rem; }
 }
+
+/* DIAGRAMS / FIGURES */
+.diagram {
+  margin: 1.5rem 0;
+  padding: 1rem 1rem 0.6rem;
+  background: #fbfdff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.diagram svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.diagram .cap { color: var(--muted); font-size: 0.86rem; margin-top: 0.5rem; text-align: center; }
+.diagram .cap strong { color: var(--primary); }
