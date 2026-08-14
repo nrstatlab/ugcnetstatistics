@@ -433,6 +433,7 @@ $\sigma$ unknown: $Q=(\bar X-\mu)/(S/\sqrt n)\sim t_{n-1}.$ CI: $\bar X\pm t_{n-
 <ol><li>Building a confidence interval for a mean.</li><li>Margin of error in a poll.</li><li>Tolerance intervals in manufacturing.</li><li>Confidence bounds on a failure rate.</li><li>Interval estimates for lab measurements.</li></ol>
 </div>
 <h2 id="ci">14. Confidence Intervals — One and Two Sample</h2>
+<div class="definition">A <strong>confidence interval</strong> for a parameter $\theta$ is a random interval $(L,U)$ computed from the sample such that $P(L\le\theta\le U)=1-\alpha$. The value $1-\alpha$ is the <strong>confidence coefficient</strong> (e.g. 95%): over many repeated samples, that proportion of the intervals will contain the true $\theta$.</div>
 
 <table>
 <tr><th>Parameter</th><th>Conditions</th><th>$1-\alpha$ CI</th></tr>
@@ -489,6 +490,7 @@ For Poisson, observe $X=49$ events in 1 unit. 95% CI: $49\pm 1.96\sqrt{49}=49\pm
 <ol><li>Big-survey approve/disapprove proportions.</li><li>Conversion-rate intervals in web analytics.</li><li>Incidence-rate intervals in epidemiology.</li><li>Event-rate confidence (accidents per month).</li><li>Large-sample intervals in A/B testing.</li></ol>
 </div>
 <h2 id="order">16. Order Statistics &amp; Empirical Distribution Function</h2>
+<div class="definition">The <strong>order statistics</strong> of a sample $X_1,\ldots,X_n$ are the observations re-arranged in increasing order, $X_{(1)}\le X_{(2)}\le\cdots\le X_{(n)}$, where $X_{(1)}=\min$ and $X_{(n)}=\max$. They are the building blocks of the sample median, range, quantiles and many non-parametric methods.</div>
 
 <h3>Distribution of Order Statistics</h3>
 $X_{(1)}\le X_{(2)}\le\cdots\le X_{(n)}.$
@@ -519,6 +521,7 @@ For Exp$(1),\,n=2.$ $X_{(1)}=\min(X_1,X_2)\sim$ Exp$(2).$ $X_{(2)}-X_{(1)}\sim$ 
 <ol><li>Percentiles in growth charts and exam ranks.</li><li>Extreme-value analysis of floods and earthquakes.</li><li>Warranty design from minimum lifetimes.</li><li>Median and quartiles in salary reports.</li><li>Goodness-of-fit tests (Kolmogorov–Smirnov).</li></ol>
 </div>
 <h2 id="rank">17. Rank Correlation: Spearman &amp; Kendall</h2>
+<div class="definition">A <strong>rank correlation</strong> measures the strength and direction of a <em>monotonic</em> relationship between two variables using only the ranks of the observations, not their exact values. Being rank-based, it is distribution-free and resistant to outliers.</div>
 
 <h3>Spearman's $\rho_s$</h3>
 Replace observations $(X_i,Y_i)$ by ranks $(R_i,S_i)$:

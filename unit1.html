@@ -280,6 +280,7 @@ $\sum X_i$ has MGF $(q+pe^t)^{\sum n_i}\Rightarrow \sum X_i\sim\text{Bin}(\sum n
 <ol><li>Quickly deriving a model's mean and variance in actuarial work.</li><li>Showing that sums of independent risks stay in the same family.</li><li>Physics — generating moments of energy distributions.</li><li>Combining independent call-arrival counts in telecom.</li><li>Deriving properties of standard distributions.</li></ol>
 </div>
 <h2 id="discrete">6. Standard Discrete Distributions</h2>
+<div class="definition">A <strong>discrete distribution</strong> is the probability model of a discrete random variable — it is fixed by a probability mass function $p(x)=P(X=x)$ over a countable set of values, with $p(x)\ge 0$ and $\sum_x p(x)=1$. The families below are the standard ones that recur throughout the syllabus.</div>
 
 <table>
 <tr><th>Distribution</th><th>pmf</th><th>Mean</th><th>Variance</th><th>MGF</th></tr>
@@ -315,6 +316,7 @@ Calls arrive at a switchboard at rate $\lambda=4$/min. Probability of exactly 6 
 <ol><li>Binomial — pass/fail counts, yes/no poll answers.</li><li>Poisson — calls to a call centre or goals in a match.</li><li>Geometric — sales calls made until the first success.</li><li>Hypergeometric — quality checks drawing items without replacement.</li><li>Negative binomial — trials until a target number of wins.</li></ol>
 </div>
 <h2 id="cont">7. Standard Continuous Distributions</h2>
+<div class="definition">A <strong>continuous distribution</strong> is the probability model of a continuous random variable — it is fixed by a probability density function $f(x)\ge 0$ with $\int_{-\infty}^{\infty} f(x)\,dx=1$, so that $P(a\le X\le b)=\int_a^b f(x)\,dx$. The standard families are listed below.</div>
 
 <table>
 <tr><th>Distribution</th><th>pdf</th><th>Mean</th><th>Variance</th><th>MGF</th></tr>
@@ -424,6 +426,7 @@ For $X\sim\text{Poisson}(9)$, $P(|X-9|\ge 6)\le 9/36=1/4.$ Compared to exact $\a
 <ol><li>Guaranteeing quality limits without knowing the exact distribution.</li><li>Setting conservative risk bounds in finance.</li><li>Choosing a safe sample size when little is known.</li><li>Flagging outliers many standard deviations from the mean.</li><li>Reliability tolerances in engineering.</li></ol>
 </div>
 <h2 id="sample">10. Sampling Distributions</h2>
+<div class="definition">A <strong>statistic</strong> is any function of the sample (such as $\bar X$ or $S^2$) that involves no unknown parameters. Its probability distribution, arising from the randomness of the sample, is called a <strong>sampling distribution</strong> — the foundation of all inference, since it tells us how an estimator or test statistic behaves from sample to sample.</div>
 
 <p>Let $X_1,\ldots,X_n$ be iid $N(\mu,\sigma^2)$. Define $\bar X=\frac{1}{n}\sum X_i$, $S^2=\frac{1}{n-1}\sum(X_i-\bar X)^2.$</p>
 <ul>
@@ -456,6 +459,7 @@ For $n=10$ from a normal population with unknown $\sigma$, the pivot $\frac{\bar
 <ol><li>Estimating average income from a survey sample.</li><li>Quality control on the mean of sampled items.</li><li>Poll margins of error before an election.</li><li>Comparing two teaching methods' mean scores (t).</li><li>Testing a process variance (chi-square / F).</li></ol>
 </div>
 <h2 id="trans">11. Transformation of Random Variables</h2>
+<div class="definition">A <strong>transformation of a random variable</strong> derives the distribution of a new variable $Y=g(X)$ (or $\mathbf Y=g(\mathbf X)$) from the known distribution of $X$. The methods below — the CDF method, the Jacobian method, and the probability integral transform — obtain the pmf/pdf of $Y$.</div>
 
 <h3>One-to-one Transformation (Continuous)</h3>
 If $Y=g(X)$ is monotonic with inverse $X=g^{-1}(Y)$:
