@@ -301,3 +301,16 @@ mjx-container { font-size: 1.05em !important; }
 .diagram svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
 .diagram .cap { color: var(--muted); font-size: 0.86rem; margin-top: 0.5rem; text-align: center; }
 .diagram .cap strong { color: var(--primary); }
+
+/* REAL-WORLD USES BOX */
+.realworld {
+  background: #f0f7ff;
+  border: 1px solid #bfdbfe;
+  border-left: 5px solid var(--primary-light);
+  border-radius: 0 8px 8px 0;
+  padding: 0.8rem 1.1rem;
+  margin: 1.3rem 0 0.6rem;
+}
+.realworld h4 { margin: 0 0 0.4rem; color: var(--primary); font-size: 1rem; }
+.realworld ol { margin: 0 0 0 1.3rem; }
+.realworld li { margin-bottom: 0.2rem; font-size: 0.93rem; color: var(--text); }

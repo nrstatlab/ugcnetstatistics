@@ -138,6 +138,11 @@ $X\sim N(\mu,1),n=25.$ Test $H_0:\mu=0$ vs $H_1:\mu>0$ at $\alpha=0.05.$ Reject 
 Coin: 100 tosses, 60 heads. Test $H_0:p=0.5$ vs $H_1:p\ne 0.5.$ $z=(0.6-0.5)/\sqrt{0.0025}=2.0$, $p$-value $=2(1-\Phi(2))=0.0455$ → reject at $\alpha=0.05.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Deciding whether a new drug really works.</li><li>Checking if a coin or machine is fair.</li><li>Did a website change lift sales?</li><li>Is average wait time above target?</li><li>Detecting bias in a process.</li></ol>
+</div>
 <h2 id="np">2. Neyman–Pearson Lemma</h2>
 
 <div class="theorem">
@@ -158,6 +163,11 @@ $X_i\sim N(\mu,1).$ $H_0:\mu=0$ vs $H_1:\mu=1.$ $L_1/L_0=\exp\{\sum X_i-n/2\}\ge
 Bernoulli: $H_0:p=0.5,H_1:p=0.7,n=10.$ $L_1/L_0=(0.7/0.5)^{\sum X}(0.3/0.5)^{n-\sum X}.$ MP test based on $\sum X\ge c.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Radar: is a signal present or absent?</li><li>Setting a medical test's cut-off.</li><li>Optimal spam vs not-spam rule.</li><li>Accept/reject decisions in quality control.</li><li>Fraud-detection thresholds.</li></ol>
+</div>
 <h2 id="mlr">3. Monotone Likelihood Ratio (MLR)</h2>
 
 <div class="definition">
@@ -179,6 +189,11 @@ Exp$(\lambda)$ has MLR in $-\sum X_i$ (or $\sum X_i$ for $1/\lambda$). UMP test 
 Bin$(n,p)$ has MLR in $\sum X_i.$ UMP test for $H_0:p\le p_0$ vs $H_1:p>p_0$ rejects when $\sum X_i\ge c.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>One-sided quality tests (is the defect rate too high?).</li><li>Is mean strength above the specification?</li><li>Detecting a rising failure rate.</li><li>One-sided drug-improvement tests.</li><li>Watching for increasing pollution levels.</li></ol>
+</div>
 <h2 id="ump">4. UMP, UMPU, UMPI Tests</h2>
 
 <ul>
@@ -199,6 +214,11 @@ $N(\mu,1)$, two-sided test $H_0:\mu=\mu_0$ vs $H_1:\mu\ne\mu_0.$ UMPU: reject if
 $N(\mu,\sigma^2)$ with $\sigma$ unknown: $t$-test is UMPU for $\mu$ and UMPI under translation–scale group.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Picking the most powerful test available.</li><li>Two-sided tests around a target value.</li><li>Tests that don't depend on the units used.</li><li>Best process-monitoring tests.</li><li>Optimal clinical-trial test design.</li></ol>
+</div>
 <h2 id="lrt">5. Likelihood Ratio Test (LRT)</h2>
 
 <div class="definition">
@@ -227,6 +247,11 @@ $X\sim N(\mu,\sigma^2)$ both unknown. $H_0:\mu=\mu_0$ gives LRT statistic monoto
 For two normal samples with $H_0:\sigma_1=\sigma_2$, LRT yields $F=S_1^2/S_2^2\sim F_{n_1-1,n_2-1}$ (under $H_0$).
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Comparing nested regression models.</li><li>Testing genetic linkage models.</li><li>Testing equality of several means.</li><li>Model selection in machine learning.</li><li>Testing whether data fit a distribution.</li></ol>
+</div>
 <h2 id="sprt">6. Wald's Sequential Probability Ratio Test (SPRT)</h2>
 
 <p>Test $H_0:\theta=\theta_0$ vs $H_1:\theta=\theta_1$ sequentially. After observing $X_1,\ldots,X_n$, compute likelihood ratio:
@@ -258,6 +283,11 @@ Bernoulli, $H_0:p=0.3$ vs $H_1:p=0.5,\alpha=\beta=0.05.$ $A=19,B=1/19.$ Continue
 SPRT for normal mean ($\sigma$ known) reduces to $\sum X_i$ vs linear bounds in $n$ — random walk crossing boundaries.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Acceptance sampling that can stop early.</li><li>Online A/B tests that end as soon as clear.</li><li>Clinical trials with early stopping for safety.</li><li>Real-time fault detection.</li><li>Inspection that minimises the number sampled.</li></ol>
+</div>
 <h2 id="chi2">7. Chi-square Tests</h2>
 
 <h3>Goodness of Fit</h3>
@@ -285,6 +315,11 @@ Die rolls 600 times: observed $(95,110,100,90,105,100).$ Expected 100 each. $\ch
 $2\times 2$ table — drug effect: $a=40,b=10,c=20,d=30.$ $\chi^2=\frac{N(ad-bc)^2}{(a+b)(c+d)(a+c)(b+d)}=\frac{100(1200-200)^2}{50\cdot 50\cdot 60\cdot 40}=\frac{10^8}{6\times 10^6}\approx 16.67$, $df=1$, highly significant.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Is a die or roulette wheel fair? (goodness of fit).</li><li>Gender vs product preference (independence).</li><li>Survey response vs region.</li><li>Genetics — observed vs expected ratios.</li><li>Comparing defect patterns across machines.</li></ol>
+</div>
 <h2 id="sign">8. Sign Test</h2>
 
 <p>For $H_0$: median = $m_0$. Let $S^+=\#(X_i>m_0),\,S^-=\#(X_i&lt;m_0).$ Under $H_0$, $S^+\sim\text{Bin}(n,1/2)$ (after deleting ties).</p>
@@ -302,6 +337,11 @@ $n=12,$ 9 differences positive, 3 negative. $P(S^+\ge 9\mid p=0.5)=\binom{12}{9}
 For $n=20$ with $S^+=15$: $z=\frac{15-10}{\sqrt 5}=2.236,p\approx 0.025$ (two-sided): significant.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Did scores improve after training (before/after)?</li><li>Taste test: do people prefer A or B?</li><li>Is the median house price above a claim?</li><li>A quick paired test needing no normality.</li><li>Did a treatment change symptoms?</li></ol>
+</div>
 <h2 id="wsr">9. Wilcoxon Signed Rank Test</h2>
 
 <p>For symmetric distribution; tests $H_0:$ median = $m_0.$</p>
@@ -322,6 +362,11 @@ $n=10,W^+=45.$ $E=27.5,V=96.25,SD=9.81.$ $z=(45-27.5)/9.81=1.78,$ two-sided $p\a
 For paired data $(X_i,Y_i)$, set $D_i=X_i-Y_i$ and apply Wilcoxon to test $H_0:$ median of $D=0.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Before/after weight change on non-normal data.</li><li>Pain scores before and after treatment.</li><li>Matched-pair product comparisons.</li><li>Median tests on small samples.</li><li>Rating changes after a policy.</li></ol>
+</div>
 <h2 id="mw">10. Mann–Whitney U Test (Wilcoxon Rank-Sum)</h2>
 
 <p>Two independent samples of sizes $m,n.$ Combine, rank from 1 to $m+n.$ Let $R_X$ = sum of ranks of $X$-sample.
@@ -338,6 +383,11 @@ $m=5,n=5,$ all $X_i$ smaller than all $Y_i$: ranks 1-5 for $X$, sum $R_X=15.$ $U
 $m=20,n=25,U=160.$ $E=250,V=20\cdot 25\cdot 46/12=1916.67,SD=43.78.$ $z=(160-250)/43.78=-2.06,p\approx 0.04.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Comparing two groups' incomes (skewed data).</li><li>Test scores from two teaching methods.</li><li>Recovery times: drug vs placebo (non-normal).</li><li>Satisfaction across two stores.</li><li>Comparing rankings of two products.</li></ol>
+</div>
 <h2 id="linrank">11. Linear Rank Tests for Location and Scale</h2>
 
 <p>General form: $T=\sum_{i=1}^n c_i a(R_i),$ with constants $c_i$ and score function $a(\cdot).$</p>
@@ -364,6 +414,11 @@ Wilcoxon rank-sum: location-shift alternative, scores $a(i)=i.$
 Ansari–Bradley: tests $H_0:\sigma_X=\sigma_Y$ when medians equal; assigns higher scores to extreme ranks.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Detecting shifts in location without assuming normality.</li><li>Comparing the spread of two processes (Ansari–Bradley).</li><li>Robust two-sample comparisons.</li><li>Comparing environmental measurements.</li><li>Reliability data with outliers.</li></ol>
+</div>
 <h2 id="kw">12. Kruskal–Wallis Test</h2>
 
 <p>Nonparametric analogue of one-way ANOVA for $k$ samples; tests $H_0$: all $k$ populations have the same continuous distribution.</p>
@@ -388,6 +443,11 @@ For $k=2$: Kruskal–Wallis equivalent to Mann–Whitney; $H=Z^2.$
 
 </section>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Comparing 3+ groups on satisfaction ratings.</li><li>Yields across several varieties (non-normal).</li><li>Salaries across departments.</li><li>Pain relief across several drugs.</li><li>Ratings across multiple websites.</li></ol>
+</div>
 <div class="pagination">
   <a href="unit4.html">&larr; Unit 4</a>
   <a class="next" href="unit6.html">Unit 6: Linear Estimation &amp; Regression &rarr;</a>

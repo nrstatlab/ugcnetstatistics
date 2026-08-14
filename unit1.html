@@ -125,6 +125,11 @@ $$P(\text{no match}) = \frac{365 \cdot 364 \cdots (365-n+1)}{365^n}.$$
 For $n=23$: $P(\text{match}) = 1 - 0.4927 \approx 0.5073$ — surprisingly high!
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Weather forecasting — the chance of rain tomorrow.</li><li>Insurance — pricing policies from accident probabilities.</li><li>Casinos and lotteries — working out the odds of a game.</li><li>Medical screening — a patient's risk before any test.</li><li>Spam filters — the probability an email is junk.</li></ol>
+</div>
 <h2 id="cond">2. Conditional Probability and Bayes' Theorem</h2>
 
 <div class="definition">
@@ -164,6 +169,11 @@ $P(W\mid U_1)=2/5,\ P(W\mid U_2)=4/5,\ P(W\mid U_3)=3/5$, each $P(U_i)=1/3$.
 $$P(U_2\mid W)=\frac{(4/5)(1/3)}{(2/5+4/5+3/5)(1/3)}=\frac{4/15}{9/15}=\tfrac{4}{9}.$$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Medical diagnosis — updating disease risk after a positive test.</li><li>Spam detection — P(spam | email says "free offer").</li><li>Courtroom evidence — updating guilt given a DNA match.</li><li>Search and rescue — narrowing a lost ship's location as areas are cleared.</li><li>Recommendations — P(you'll like a film | you liked similar ones).</li></ol>
+</div>
 <h2 id="rv">3. Random Variables and Distribution Functions</h2>
 
 <div class="definition">
@@ -193,6 +203,11 @@ Let $X$ be the number of heads in 3 tosses of a fair coin. Then $X\sim\text{Bin}
 $X$ has pdf $f(x)=2x$ for $0\le x\le 1$, zero otherwise. Then $F(x)=x^2$ for $0\le x\le 1$. Hence $P(0.3&lt;X\le 0.7)=F(0.7)-F(0.3)=0.49-0.09=0.40.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Number of customers arriving at a shop in an hour.</li><li>Daily rainfall recorded in a city.</li><li>Number of defective items in a production batch.</li><li>Waiting time at a bus stop.</li><li>Exam scores across a class.</li></ol>
+</div>
 <h2 id="exp">4. Expectation and Moments</h2>
 
 <div class="definition">
@@ -229,6 +244,11 @@ For a fair die, $E(X)=\frac{1+2+\cdots+6}{6}=3.5$, $E(X^2)=\frac{91}{6}$, so $\t
 For $X$ with pdf $f(x)=2x,\,0\le x\le 1$: $E(X)=\int_0^1 2x^2 dx=\tfrac{2}{3}$, $E(X^2)=\int_0^1 2x^3 dx=\tfrac{1}{2}$, so $\text{Var}(X)=\tfrac{1}{2}-\tfrac{4}{9}=\tfrac{1}{18}.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Expected profit or loss of a business decision.</li><li>Average claim size an insurer must budget for.</li><li>Expected winnings in a game or bet.</li><li>Mean delivery time a courier promises.</li><li>Comparing funds by average return and volatility.</li></ol>
+</div>
 <h2 id="mgf">5. Moment Generating Function (MGF)</h2>
 
 <div class="definition">
@@ -254,6 +274,11 @@ If $X_i\overset{\text{iid}}{\sim}\text{Bin}(n_i,p)$, then $M_{X_i}(t)=(q+pe^t)^{
 $\sum X_i$ has MGF $(q+pe^t)^{\sum n_i}\Rightarrow \sum X_i\sim\text{Bin}(\sum n_i,p).$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Quickly deriving a model's mean and variance in actuarial work.</li><li>Showing that sums of independent risks stay in the same family.</li><li>Physics — generating moments of energy distributions.</li><li>Combining independent call-arrival counts in telecom.</li><li>Deriving properties of standard distributions.</li></ol>
+</div>
 <h2 id="discrete">6. Standard Discrete Distributions</h2>
 
 <table>
@@ -284,6 +309,11 @@ A coin with $p=0.3$ is tossed 10 times. $P(X=4)=\binom{10}{4}(0.3)^4(0.7)^6\appr
 Calls arrive at a switchboard at rate $\lambda=4$/min. Probability of exactly 6 calls in a minute: $P(X=6)=\frac{e^{-4}4^6}{6!}\approx 0.1042.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Binomial — pass/fail counts, yes/no poll answers.</li><li>Poisson — calls to a call centre or goals in a match.</li><li>Geometric — sales calls made until the first success.</li><li>Hypergeometric — quality checks drawing items without replacement.</li><li>Negative binomial — trials until a target number of wins.</li></ol>
+</div>
 <h2 id="cont">7. Standard Continuous Distributions</h2>
 
 <table>
@@ -328,6 +358,11 @@ Lifetime of a bulb is exponential with mean 500 hours. Probability it lasts at l
 $$P(X>800\mid X>300)=P(X>500)=e^{-500/500}=e^{-1}\approx 0.368.$$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Normal — heights, IQ scores, measurement errors.</li><li>Exponential — time between machine breakdowns.</li><li>Uniform — random-number generation in simulations.</li><li>Gamma — insurance claim sizes and rainfall totals.</li><li>Beta — modelling proportions like conversion rates.</li></ol>
+</div>
 <h2 id="joint">8. Jointly Distributed Random Variables</h2>
 
 <div class="definition">
@@ -357,6 +392,11 @@ Let $f(x,y)=2$ for $0&lt;x&lt;y<1$. Then $f_X(x)=\int_x^1 2\,dy=2(1-x)$, $f_{Y\m
 For two fair dice $X,Y$, $\text{Cov}(X,Y)=0$ (independence), $\text{Var}(X+Y)=2(35/12)=35/6.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Height and weight of people considered together.</li><li>Returns of two stocks for portfolio risk.</li><li>Temperature and ice-cream sales.</li><li>Advertising spend and revenue.</li><li>Rainfall and crop yield together.</li></ol>
+</div>
 <h2 id="cheb">9. Chebyshev's Inequality</h2>
 
 <div class="theorem">
@@ -378,6 +418,11 @@ $\mu=50,\sigma=5$. Bound on $P(40&lt;X<60)$: $P(|X-50|\ge 10)\le 25/100=0.25\Rig
 For $X\sim\text{Poisson}(9)$, $P(|X-9|\ge 6)\le 9/36=1/4.$ Compared to exact $\approx 0.043$ — Chebyshev is loose but distribution-free.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Guaranteeing quality limits without knowing the exact distribution.</li><li>Setting conservative risk bounds in finance.</li><li>Choosing a safe sample size when little is known.</li><li>Flagging outliers many standard deviations from the mean.</li><li>Reliability tolerances in engineering.</li></ol>
+</div>
 <h2 id="sample">10. Sampling Distributions</h2>
 
 <p>Let $X_1,\ldots,X_n$ be iid $N(\mu,\sigma^2)$. Define $\bar X=\frac{1}{n}\sum X_i$, $S^2=\frac{1}{n-1}\sum(X_i-\bar X)^2.$</p>
@@ -405,6 +450,11 @@ A sample of $n=25$ from $N(\mu,16)$. Then $\bar X\sim N(\mu,16/25)$, so SD$(\bar
 For $n=10$ from a normal population with unknown $\sigma$, the pivot $\frac{\bar X-\mu}{S/\sqrt{10}}\sim t_9.$ For 95% CI, use $t_{9,0.025}=2.262.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Estimating average income from a survey sample.</li><li>Quality control on the mean of sampled items.</li><li>Poll margins of error before an election.</li><li>Comparing two teaching methods' mean scores (t).</li><li>Testing a process variance (chi-square / F).</li></ol>
+</div>
 <h2 id="trans">11. Transformation of Random Variables</h2>
 
 <h3>One-to-one Transformation (Continuous)</h3>
@@ -428,6 +478,11 @@ $X\sim\text{Exp}(1)$, $Y=X^2$. Then $x=\sqrt y$, $|dx/dy|=1/(2\sqrt y)$. So $f_Y
 $X,Y\overset{\text{iid}}{\sim}N(0,1)$. Polar transform $R=\sqrt{X^2+Y^2}$, $\Theta=\arctan(Y/X)$ gives $R^2\sim\chi^2_2=\text{Exp}(1/2)$ and $\Theta\sim\text{Uniform}(0,2\pi)$ — basis of Box-Muller.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Converting measurement units inside a model.</li><li>Simulating random values (inverse-transform) for games.</li><li>Log-transforming skewed income or price data.</li><li>Finding the distribution of area from a random radius.</li><li>Box–Muller generating normal noise from uniform numbers.</li></ol>
+</div>
 <h2 id="cf">12. Characteristic Function</h2>
 
 <div class="definition">
@@ -455,6 +510,11 @@ $X\sim N(0,1)$: $\varphi(t)=e^{-t^2/2}.$ Hence $X+Y$ for independent standard no
 $X\sim\text{Cauchy}(0,1)$: $\varphi(t)=e^{-|t|}.$ For iid $X_1,\ldots,X_n$: $\bar X$ has $\varphi(t)=e^{-|t|/n\cdot n}=e^{-|t|}$, i.e. $\bar X\sim\text{Cauchy}(0,1)$ — CLT fails (no finite mean).
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Proving the Central Limit Theorem.</li><li>Adding independent insurance risks (convolution).</li><li>Signal processing in the frequency domain.</li><li>Handling heavy-tailed data where the MGF fails.</li><li>Deriving limit results for large samples.</li></ol>
+</div>
 <h2 id="conv">13. Modes of Convergence of Random Variables</h2>
 
 <table>
@@ -498,6 +558,11 @@ $X_n=1$ on $[0,1/n]$ and $0$ elsewhere, on Uniform$(0,1)$. Since $P(X_n=1)=1/n\t
 Let $X_n\sim N(0,1)$ for all $n$. Then $X_n\xrightarrow{d}X\sim N(0,1)$ but does not converge in probability (each $X_n$ is independent).
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Justifying that estimates improve as data grows.</li><li>Accuracy guarantees for Monte-Carlo simulation.</li><li>Reliability of long-run averages in insurance.</li><li>Convergence of machine-learning training.</li><li>Approximating distributions in large samples.</li></ol>
+</div>
 <h2 id="lln">14. Weak and Strong Laws of Large Numbers</h2>
 
 <div class="theorem">
@@ -526,6 +591,11 @@ Toss a fair coin $n$ times; $X_i$ = 1 if head. SLLN: relative frequency of heads
 For Cauchy distribution, mean does not exist; $\bar X_n$ does NOT converge — both LLNs fail.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Why casinos always profit in the long run.</li><li>Insurance — average claims stabilise over many policies.</li><li>Opinion polls sharpen with larger samples.</li><li>A/B testing conversion rates over many visitors.</li><li>Estimating π or integrals by simulation.</li></ol>
+</div>
 <h2 id="clt">15. Central Limit Theorem (CLT)</h2>
 
 <div class="theorem">
@@ -556,6 +626,11 @@ Suppose $X_i\sim\text{Exp}(1)$, $n=50$. $E(\bar X)=1$, $\text{Var}(\bar X)=1/50.
 
 </section>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Why averages and errors look bell-shaped.</li><li>Poll margins of error and confidence intervals.</li><li>Control charts assuming normal sample means.</li><li>Pooling many small risks in finance.</li><li>Approximating binomial counts with a normal curve.</li></ol>
+</div>
 <div class="pagination">
   <a href="index.html">&larr; Home</a>
   <a class="next" href="unit2.html">Unit 2: Real Analysis &amp; Matrix Algebra &rarr;</a>

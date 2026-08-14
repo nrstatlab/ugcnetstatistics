@@ -128,6 +128,11 @@ $X_1,\ldots,X_n\sim N(\mu,\sigma^2).$ $\bar X$ is unbiased for $\mu$. $S^2=\frac
 For Bernoulli$(p)$, $\bar X$ is unbiased for $p$; but $\bar X^2$ is NOT unbiased for $p^2$ (since $E\bar X^2=p^2+p(1-p)/n$).
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Reporting an unbiased average income from a sample.</li><li>Calibrating instruments to remove systematic error.</li><li>Unbiased variance estimates in quality control.</li><li>Fair estimates of vote share in polling.</li><li>Estimating a defect rate without built-in bias.</li></ol>
+</div>
 <h2 id="consist">2. Consistency</h2>
 
 <div class="definition">
@@ -145,6 +150,11 @@ $\bar X_n$ is consistent for $\mu$ by WLLN: $E(\bar X)=\mu,\text{Var}(\bar X)=\s
 For $X_i\sim U(0,\theta)$, $T=\max(X_i)$ is consistent: $P(T<\theta-\varepsilon)=(1-\varepsilon/\theta)^n\to 0.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Trusting estimates to improve with bigger samples.</li><li>Sensor readings settling down with more measurements.</li><li>Poll accuracy rising with sample size.</li><li>Model parameters stabilising as data grows.</li><li>Long-run frequency estimating a true probability.</li></ol>
+</div>
 <h2 id="mom">3. Method of Moments (MoM)</h2>
 
 <p>Equate sample moments to population moments and solve for parameters:
@@ -160,6 +170,11 @@ $X\sim N(\mu,\sigma^2).$ MoM: $\hat\mu=\bar X$, $\hat\sigma^2=\tfrac{1}{n}\sum X
 $X\sim\text{Gamma}(\alpha,\beta)$ with mean $\alpha/\beta$, variance $\alpha/\beta^2.$ MoM: $\hat\alpha=\bar X^2/s^2,\hat\beta=\bar X/s^2.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Fast first estimates when fitting a distribution.</li><li>Fitting income data to a gamma model.</li><li>Estimating rates from average counts.</li><li>Starting values for more complex fitting.</li><li>Calibrating input distributions for simulation.</li></ol>
+</div>
 <h2 id="mle">4. Maximum Likelihood Estimation</h2>
 
 <div class="definition">
@@ -185,6 +200,11 @@ Bernoulli$(p)$: $\log L=\sum X_i\log p+(n-\sum X_i)\log(1-p)$. $\hat p_{MLE}=\ba
 $N(\mu,\sigma^2)$: $\hat\mu=\bar X$, $\hat\sigma^2=\frac{1}{n}\sum(X_i-\bar X)^2$ (biased; corrected by $n/(n-1)$).
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Fitting logistic models in medicine and credit scoring.</li><li>Estimating failure rates in reliability.</li><li>Training many machine-learning models.</li><li>Estimating click and conversion probabilities.</li><li>Estimating parameters in genetics.</li></ol>
+</div>
 <h2 id="eff">5. Efficiency and UMVUE</h2>
 
 <p><strong>Efficiency</strong> of unbiased $T$: $e(T)=\frac{1/I(\theta)}{V(T)}.$ $T$ is <em>efficient</em> if $e=1.$</p>
@@ -203,6 +223,11 @@ $\bar X$ is UMVUE for $\mu$ in $N(\mu,\sigma^2)$ — both unbiased and attains C
 For Poisson$(\lambda)$: $\bar X$ is UMVUE for $\lambda$. To estimate $e^{-\lambda}=P(X=0)$, the UMVUE is $(1-1/n)^{T}$ where $T=\sum X_i.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Choosing the most precise estimator for given data.</li><li>Minimising cost while hitting a target accuracy.</li><li>Best unbiased estimate of a defect rate.</li><li>Efficient survey estimators to save budget.</li><li>Comparing estimators in simulation studies.</li></ol>
+</div>
 <h2 id="crlb">6. Cramér–Rao Lower Bound (CRLB)</h2>
 
 <div class="theorem">
@@ -225,6 +250,11 @@ Bernoulli$(p)$: $I(p)=\frac{1}{p(1-p)}.$ CRLB $=p(1-p)/n.$ $V(\bar X)=p(1-p)/n$ 
 Normal $\sigma^2$ known, $\mu$ unknown: $I(\mu)=1/\sigma^2,$ CRLB $=\sigma^2/n=V(\bar X).$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>The best possible accuracy of GPS positioning.</li><li>Limits of radar and sonar estimation.</li><li>Designing sensors to a precision target.</li><li>Planning sample size for a required precision.</li><li>Benchmarking estimator quality in signal processing.</li></ol>
+</div>
 <h2 id="suff">7. Sufficiency &amp; Factorization Theorem</h2>
 
 <div class="definition">
@@ -252,6 +282,11 @@ Bernoulli: $f=p^x(1-p)^{1-x}.$ Joint $=p^{\sum x_i}(1-p)^{n-\sum x_i}.$ So $T=\s
 $N(\mu,\sigma^2)$: joint factors with $T=(\sum X_i,\sum X_i^2)$ sufficient — equivalently $(\bar X,S^2).$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Summarising data by a few numbers with no loss.</li><li>Storing totals instead of full datasets.</li><li>Data compression for inference.</li><li>Reporting the sample sum or mean in QC.</li><li>Streaming statistics that keep running summaries.</li></ol>
+</div>
 <h2 id="minsuff">8. Minimal Sufficiency &amp; Ancillarity</h2>
 
 <div class="definition">
@@ -272,6 +307,11 @@ For $N(\mu,1)$: $\bar X$ is minimal sufficient. $S^2$ is ancillary.
 For $U(\theta,\theta+1)$: $(X_{(1)},X_{(n)})$ is minimal sufficient; range $X_{(n)}-X_{(1)}$ is ancillary.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Finding the smallest summary inference needs.</li><li>Efficient data reduction in big-data pipelines.</li><li>Spotting which extra data adds nothing.</li><li>Designing compact monitoring statistics.</li><li>Simplifying models to their essentials.</li></ol>
+</div>
 <h2 id="complete">9. Completeness</h2>
 
 <div class="definition">
@@ -292,6 +332,11 @@ $\sum X_i$ is complete sufficient for Bernoulli$(p)$, Poisson$(\lambda)$, Exp$(\
 For $U(0,\theta)$: $X_{(n)}$ is complete sufficient — $E[g(X_{(n)})]=0$ implies $g\equiv 0.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Guaranteeing a unique best unbiased estimator.</li><li>Avoiding ambiguous estimates in surveys.</li><li>Theory behind reliable quality estimates.</li><li>Ensuring a model is identifiable.</li><li>Foundation for building UMVUEs.</li></ol>
+</div>
 <h2 id="rb">10. Rao–Blackwell Theorem</h2>
 
 <div class="theorem">
@@ -313,6 +358,11 @@ Bernoulli$(p)$, want UMVUE of $p^2.$ $X_1 X_2$ is unbiased; $T=\sum X_i$ suffici
 $X_i\sim$ Poisson$(\lambda),$ unbiased estimator of $e^{-\lambda}$: $W=I(X_1=0).$ $T=\sum X_i$ sufficient. Since $X_1\mid T=t\sim$ Bin$(t,1/n)$, $E(W\mid T=t)=P(X_1=0\mid T=t)=\left(\frac{n-1}{n}\right)^t=(1-1/n)^t.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Turning a rough estimator into a better one.</li><li>Variance reduction in Monte-Carlo simulation.</li><li>Sharpening survey estimates.</li><li>Refining predicted probabilities in ML.</li><li>Better reliability estimates from summaries.</li></ol>
+</div>
 <h2 id="ls">11. Lehmann–Scheffé Theorem</h2>
 
 <div class="theorem">
@@ -335,6 +385,11 @@ $U(0,\theta)$, $X_{(n)}$ complete sufficient, $E(X_{(n)})=\frac{n}{n+1}\theta.$ 
 $X_i\sim$ Poisson$(\lambda),$ $T=\sum X_i$ complete sufficient. UMVUE of $\lambda$ is $\bar X=T/n.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Constructing the best unbiased estimator in practice.</li><li>Best estimate of a probability like P(no defect).</li><li>Optimal survey estimators.</li><li>Reliability-metric estimation.</li><li>A yardstick to judge other estimators.</li></ol>
+</div>
 <h2 id="basu">12. Basu's Theorem</h2>
 
 <div class="theorem">
@@ -351,6 +406,11 @@ For $N(\mu,1)$: $\bar X$ is complete sufficient; $S^2$ is ancillary $\Rightarrow
 For Exp$(\theta)$: $\sum X_i$ complete sufficient; $X_{(1)}/\sum X_i$ has distribution free of $\theta$ → independent of $\sum X_i.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Proving sample mean and variance are independent (normal).</li><li>Simplifying derivations of sampling distributions.</li><li>Justifying separate study of location and spread.</li><li>Underlying theory of the t-test.</li><li>Independence arguments in probability proofs.</li></ol>
+</div>
 <h2 id="pivot">13. Method of Pivoting</h2>
 
 <div class="definition">
@@ -367,6 +427,11 @@ $X_i\sim N(\mu,\sigma^2)$ ($\sigma$ known): $Q=(\bar X-\mu)/(\sigma/\sqrt n)\sim
 $\sigma$ unknown: $Q=(\bar X-\mu)/(S/\sqrt n)\sim t_{n-1}.$ CI: $\bar X\pm t_{n-1,\alpha/2}S/\sqrt n.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Building a confidence interval for a mean.</li><li>Margin of error in a poll.</li><li>Tolerance intervals in manufacturing.</li><li>Confidence bounds on a failure rate.</li><li>Interval estimates for lab measurements.</li></ol>
+</div>
 <h2 id="ci">14. Confidence Intervals — One and Two Sample</h2>
 
 <table>
@@ -391,6 +456,11 @@ $n=25,\bar X=10,S=2.$ 95% CI for $\mu$: $10\pm 2.064(2/5)=10\pm 0.826=(9.17,10.8
 $n_1=10,n_2=12,\bar X=15,\bar Y=12,S_p=3.$ 95% CI for $\mu_1-\mu_2$: $3\pm 2.086(3)\sqrt{1/10+1/12}=3\pm 2.69.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>The "±3% margin of error" in election polls.</li><li>A drug's likely effect range in a trial.</li><li>Confidence range for average delivery time.</li><li>Control limits for a process mean.</li><li>Confidence interval for a conversion rate.</li></ol>
+</div>
 <h2 id="large">15. Large-Sample Confidence Intervals</h2>
 
 <p>Based on CLT and consistency: if $\hat\theta$ is asymptotically normal,
@@ -413,6 +483,11 @@ Survey: 60 successes in 100 trials. $\hat p=0.6.$ 95% CI: $0.6\pm 1.96\sqrt{0.24
 For Poisson, observe $X=49$ events in 1 unit. 95% CI: $49\pm 1.96\sqrt{49}=49\pm 13.72=(35.28,62.72).$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Big-survey approve/disapprove proportions.</li><li>Conversion-rate intervals in web analytics.</li><li>Incidence-rate intervals in epidemiology.</li><li>Event-rate confidence (accidents per month).</li><li>Large-sample intervals in A/B testing.</li></ol>
+</div>
 <h2 id="order">16. Order Statistics &amp; Empirical Distribution Function</h2>
 
 <h3>Distribution of Order Statistics</h3>
@@ -438,6 +513,11 @@ $X_i\sim U(0,1),\,n=5.$ $f_{X_{(3)}}(x)=\frac{5!}{2!2!}x^2(1-x)^2=30x^2(1-x)^2,\
 For Exp$(1),\,n=2.$ $X_{(1)}=\min(X_1,X_2)\sim$ Exp$(2).$ $X_{(2)}-X_{(1)}\sim$ Exp$(1)$ independent of $X_{(1)}.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Percentiles in growth charts and exam ranks.</li><li>Extreme-value analysis of floods and earthquakes.</li><li>Warranty design from minimum lifetimes.</li><li>Median and quartiles in salary reports.</li><li>Goodness-of-fit tests (Kolmogorov–Smirnov).</li></ol>
+</div>
 <h2 id="rank">17. Rank Correlation: Spearman &amp; Kendall</h2>
 
 <h3>Spearman's $\rho_s$</h3>
@@ -469,6 +549,11 @@ Same data: pairs (1,2),(1,3),(1,4),(1,5),(2,3),(2,4),(2,5),(3,4),(3,5),(4,5). Co
 
 </section>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Agreement between two judges' rankings.</li><li>Correlating exam rank with interview rank.</li><li>Customer preference vs price rank.</li><li>Association in non-normal data (income vs health).</li><li>Comparing sports ranking systems.</li></ol>
+</div>
 <div class="pagination">
   <a href="unit3.html">&larr; Unit 3</a>
   <a class="next" href="unit5.html">Unit 5: Testing of Hypotheses &rarr;</a>

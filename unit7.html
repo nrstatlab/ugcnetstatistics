@@ -111,6 +111,11 @@ Quarterly retail sales: trend (long-term growth), seasonal peaks in Q4, business
 Daily stock returns typically have $\bar Y\approx 0$ but exhibit volatility clustering — autocorrelation in $Y_t^2.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Tracking monthly sales.</li><li>Daily temperature records.</li><li>A stock's price history.</li><li>Website traffic over time.</li><li>Electricity-demand logs.</li></ol>
+</div>
 <h2 id="acf">2. Autocovariance, ACF, PACF, Correlogram</h2>
 
 <h3>Autocovariance Function (ACVF)</h3>
@@ -147,6 +152,11 @@ For AR(1) with $\phi=0.8$: $\rho_k=0.8^k$ — geometric decay. PACF: $\phi_{11}=
 
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Detecting weekly or seasonal patterns in sales.</li><li>Checking whether returns are predictable.</li><li>Diagnosing the order of a forecasting model.</li><li>Finding the lag structure in demand.</li><li>Testing residuals for leftover pattern.</li></ol>
+</div>
 <h2 id="stat">3. Stationarity &amp; Ergodicity</h2>
 
 <div class="definition">
@@ -171,6 +181,11 @@ White noise $\varepsilon_t\sim$ iid$(0,\sigma^2)$ — strictly stationary and er
 $Y_t=A+\varepsilon_t$ with random $A$ but fixed for all $t$: weakly stationary but not ergodic (sample mean $\to A$, not $E(A)$).
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Checking a series is stable before modelling.</li><li>Detecting a trend or drift in a process.</li><li>Differencing data to prepare for forecasts.</li><li>Monitoring process stability.</li><li>Validating that time-averages are meaningful.</li></ol>
+</div>
 <h2 id="wold">4. General Linear Process &amp; Wold Decomposition</h2>
 
 <h3>General Linear Process</h3>
@@ -193,6 +208,11 @@ Pure deterministic: $Y_t=\cos(\omega t)$ — entirely predictable, $V_t=Y_t.$
 ARMA process can be written in MA($\infty$) form: $\psi_j$ are coefficients in $\Psi(B)=\Theta(B)/\Phi(B).$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>The foundation for ARMA modelling.</li><li>Separating predictable from random parts.</li><li>Signal-plus-noise decomposition.</li><li>Understanding the limits of forecastability.</li><li>Building linear forecasting models.</li></ol>
+</div>
 <h2 id="ma">5. Moving Average (MA) Process</h2>
 
 <p>MA($q$):
@@ -221,6 +241,11 @@ MA(1): $Y_t=\varepsilon_t+\theta\varepsilon_{t-1}.$ $\rho_1=\theta/(1+\theta^2),
 MA(2): $Y_t=\varepsilon_t+0.5\varepsilon_{t-1}-0.3\varepsilon_{t-2}.$ ACF nonzero only at lags 1,2.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Smoothing short-lived shocks in demand.</li><li>Modelling noisy measurement series.</li><li>Economic surprise/innovation effects.</li><li>Filtering short-term quality signals.</li><li>Modelling short-memory data.</li></ol>
+</div>
 <h2 id="ar">6. Autoregressive (AR) Process</h2>
 
 <p>AR($p$):
@@ -246,6 +271,11 @@ AR(1) $Y_t=0.7Y_{t-1}+\varepsilon_t,\,\sigma^2=1.$ $\gamma_0=1/(1-0.49)=1.96,\rh
 AR(2) $Y_t=0.5Y_{t-1}+0.3Y_{t-2}+\varepsilon_t.$ Roots of $1-0.5B-0.3B^2=0$: $B=(-0.5\pm\sqrt{0.25+1.2})/0.6\approx 1.17,\,-2.84$ → both $|B|>1$, stationary.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Forecasting from recent past values.</li><li>Persistence in interest rates and inflation.</li><li>Predicting temperature or river flow.</li><li>Modelling speech and audio.</li><li>Inventory and demand forecasting.</li></ol>
+</div>
 <h2 id="arma">7. ARMA Process &amp; Conditions</h2>
 
 <p>ARMA($p,q$):
@@ -272,6 +302,11 @@ ARMA(1,1) $Y_t=0.5Y_{t-1}+\varepsilon_t+0.3\varepsilon_{t-1}.$ Stationary ($|0.5
 For ARMA(1,1) above: $\rho_1=\frac{(1+\phi\theta)(\phi+\theta)}{1+2\phi\theta+\theta^2}=\frac{(1.15)(0.8)}{1.39}\approx 0.662,\,\rho_k=0.5\rho_{k-1}$ for $k\ge 2.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>General short-term sales and demand forecasts.</li><li>Modelling economic indicators.</li><li>Energy-load forecasting.</li><li>Modelling correlated process data.</li><li>Signal modelling in engineering.</li></ol>
+</div>
 <h2 id="yw">8. Yule–Walker Equations</h2>
 
 <p>For AR($p$), multiplying by $Y_{t-k}$ and taking expectations:
@@ -291,6 +326,11 @@ AR(1): $\rho_1=\phi_1\Rightarrow\hat\phi_1=r_1.$ Then $\hat\phi_k=r_1^k$ predict
 AR(2) with $r_1=0.6,r_2=0.4.$ Solve $\rho_1=\phi_1+\phi_2 r_1,\,\rho_2=\phi_1 r_1+\phi_2.$ $\Rightarrow$ $\phi_1=\frac{\rho_1(1-\rho_2)}{1-\rho_1^2}=0.5625,\ \phi_2=\frac{\rho_2-\rho_1^2}{1-\rho_1^2}=0.0625.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Estimating AR coefficients for forecasts.</li><li>Linear prediction in speech coding.</li><li>Spectral estimation.</li><li>Fitting autoregressive demand models.</li><li>Radar and signal parameter estimation.</li></ol>
+</div>
 <h2 id="order">9. Identification, Estimation, Order Selection</h2>
 
 <table>
@@ -331,6 +371,11 @@ Sample ACF cuts off at lag 2, PACF tails off → MA(2).
 AIC values: AR(1)=120, AR(2)=115, AR(3)=116. Choose AR(2).
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Choosing the right model with AIC/BIC.</li><li>Box–Jenkins model building for sales.</li><li>Avoiding over- and under-fitting.</li><li>Residual diagnostics (Ljung–Box).</li><li>Automated forecasting pipelines.</li></ol>
+</div>
 <h2 id="fcst">10. Forecasting</h2>
 
 <p>Minimum MSE forecast for $h$-step ahead: $\hat Y_t(h)=E(Y_{t+h}\mid \mathcal F_t).$ For ARMA in MA($\infty$) form:
@@ -353,6 +398,11 @@ AR(1) $\phi=0.6,\,Y_T=10.$ Forecasts: $\hat Y(1)=6,\hat Y(2)=3.6,\,\to 0.$
 MA(1): $\hat Y_t(1)=\theta\varepsilon_t,\,\hat Y_t(h)=0$ for $h\ge 2.$ Variance: $\sigma^2$ for $h=1$, $\sigma^2(1+\theta^2)$ for $h\ge 2.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Next-quarter sales forecasts.</li><li>Weather and rainfall prediction.</li><li>Planning electricity demand.</li><li>Inventory planning from demand forecasts.</li><li>Staffing forecasts for call centres.</li></ol>
+</div>
 <h2 id="ns">11. Non-stationary Time Series — Random Walk &amp; ARIMA</h2>
 
 <h3>Random Walk</h3>
@@ -381,6 +431,11 @@ Stock prices typically modelled as ARIMA(0,1,0) — random walk; returns are whi
 ARIMA(1,1,1): $(1-\phi B)(1-B)Y_t=(1+\theta B)\varepsilon_t.$ First-difference, fit ARMA(1,1) on $\Delta Y.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Modelling stock prices as a random walk.</li><li>Forecasting GDP and inflation by differencing.</li><li>Sales with a trend via ARIMA.</li><li>Modelling exchange rates.</li><li>Testing for unit roots in economics.</li></ol>
+</div>
 <h2 id="spec">12. Spectral Analysis</h2>
 
 <h3>Spectral Density</h3>
@@ -410,6 +465,11 @@ AR(1) with $\phi=0.9$: spectral density large at low frequencies — long-run cy
 AR(1) with $\phi=-0.9$: density large at high frequencies — alternating pattern.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Finding cycles and periodicities in data.</li><li>Vibration analysis of machinery.</li><li>EEG and ECG frequency analysis.</li><li>Detecting business cycles.</li><li>Frequency content of audio signals.</li></ol>
+</div>
 <h2 id="period">13. Periodogram &amp; Spectral Estimation</h2>
 
 <h3>Periodogram</h3>
@@ -434,6 +494,11 @@ Fisher's $g$-test: under white noise null, max ordinate ratio $g=I_{\max}/\sum I
 
 </section>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Detecting hidden seasonal cycles.</li><li>Sunspot and climate cycle detection.</li><li>Finding machinery fault frequencies.</li><li>Tidal and astronomical periodicities.</li><li>Signal periodicity in engineering.</li></ol>
+</div>
 <div class="pagination">
   <a href="unit6.html">&larr; Unit 6</a>
   <a class="next" href="unit8.html">Unit 8: Multivariate Analysis &rarr;</a>

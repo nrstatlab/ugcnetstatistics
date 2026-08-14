@@ -140,6 +140,11 @@ Data $(1,2),(2,3),(3,5),(4,4),(5,6).$ $\bar x=3,\bar y=4,\,S_{xx}=10,S_{xy}=9.$ 
 $n=20,\bar x=10,S_{xx}=100,\hat\beta_1=2,\hat\sigma^2=4.$ $\text{SE}(\hat\beta_1)=\sqrt{4/100}=0.2,$ 95% CI: $2\pm 2.10\cdot 0.2=(1.58,2.42).$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Predicting sales from advertising spend.</li><li>House price from floor area.</li><li>Crop yield from rainfall.</li><li>Exam score from study hours.</li><li>Fuel use from distance driven.</li></ol>
+</div>
 <h2 id="mlr">2. Multiple Linear Regression</h2>
 
 <p>Matrix form: $\mathbf y=\mathbf X\boldsymbol\beta+\boldsymbol\varepsilon$ where $\mathbf X$ is $n\times p,\,\boldsymbol\varepsilon\sim N(\mathbf 0,\sigma^2 I).$</p>
@@ -165,6 +170,11 @@ Two regressors plus intercept, $n=10$. $\hat{\boldsymbol\beta}=(X'X)^{-1}X'y.$ C
 For a balanced design with orthogonal columns: $X'X$ diagonal $\Rightarrow$ regression coefficients independent.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>House price from size, location and age.</li><li>Salary from education, experience and skills.</li><li>Demand from price, income and ads.</li><li>Health outcome from several risk factors.</li><li>Yield from rain, fertiliser and temperature.</li></ol>
+</div>
 <h2 id="gm">3. Gauss–Markov Theorem</h2>
 
 <div class="theorem">
@@ -183,6 +193,11 @@ Mean of iid sample: $\bar X$ is BLUE of $\mu$ — a special case where $X=\mathb
 For SLR, $\hat\beta_1=\sum c_i y_i$ with $c_i=(x_i-\bar x)/S_{xx}$ — minimum variance among linear unbiased.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Justifying OLS as the best linear method.</li><li>Reliable slope estimates in forecasting.</li><li>Engineering calibration lines.</li><li>Trusting regression results in research.</li><li>A baseline to compare other estimators.</li></ol>
+</div>
 <h2 id="mle">4. Maximum Likelihood Estimation</h2>
 
 <p>Under normality $\boldsymbol\varepsilon\sim N(0,\sigma^2 I)$:
@@ -199,6 +214,11 @@ $n=20,\text{SSE}=80,p=3.$ $\hat\sigma^2_{ML}=4,$ $\hat\sigma^2_{unbiased}=80/17\
 Under non-normal errors, OLS is still BLUE but no longer MLE.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Fitting regression with normal errors.</li><li>Foundation for logistic and other GLMs.</li><li>Credit-risk scoring.</li><li>Estimating error variance for prediction intervals.</li><li>Maximum-likelihood curve fitting.</li></ol>
+</div>
 <h2 id="hyp">5. Hypothesis Tests on Regression Coefficients</h2>
 
 <h3>$t$-test for individual $\beta_j$</h3>
@@ -218,6 +238,11 @@ $\hat\beta_1=2.5,\,\text{SE}=0.5,n=15,p=3.$ $t=5,$ $df=12,$ $p<0.001.$
 $R^2=0.8,n=30,p=4.$ $F=\frac{0.8/3}{0.2/26}=34.67,$ highly significant.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Is advertising's effect statistically real?</li><li>Does drug dose matter?</li><li>Which predictors to keep in a model.</li><li>Is the price effect significant?</li><li>Testing whether a policy had an impact.</li></ol>
+</div>
 <h2 id="anova">6. ANOVA for Linear Model, $R^2$, Adjusted $R^2$</h2>
 
 <table>
@@ -244,6 +269,11 @@ $n=25,p=4,R^2=0.85.$ $R_{adj}^2=1-0.15(24/21)=1-0.171=0.829.$
 Adding irrelevant variable: $R^2$ never decreases but $R_{adj}^2$ may decrease — useful for model selection.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>How much variation the model explains (R²).</li><li>Overall significance of a model (F-test).</li><li>Comparing the fit of competing models.</li><li>Reporting predictive power to stakeholders.</li><li>Comparing feature sets in machine learning.</li></ol>
+</div>
 <h2 id="linhyp">7. Tests of Linear Hypothesis</h2>
 
 <p>$H_0:C\boldsymbol\beta=\mathbf d$ where $C$ is $q\times p$ of full row rank.
@@ -261,6 +291,11 @@ Test $H_0:\beta_2=\beta_3$ in 4-coefficient model: $C=(0,0,1,-1),\,d=0.$
 Chow test for structural break: full model with separate slopes vs pooled. $F$-test compares restricted vs full SSE.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Testing constant returns to scale in economics.</li><li>Chow test for a structural break.</li><li>Testing whether two coefficients are equal.</li><li>Joint significance of a group of variables.</li><li>Testing the effect of a policy change.</li></ol>
+</div>
 <h2 id="gls">8. Generalized &amp; Weighted Least Squares</h2>
 
 <p>If $\text{Var}(\boldsymbol\varepsilon)=\sigma^2 V$ with known $V$ (PD):
@@ -281,6 +316,11 @@ If $\sigma_i^2=\sigma^2 x_i^2$, use $w_i=1/x_i^2$ — equivalent to regressing $
 With AR(1) errors, $V$ has Toeplitz form; GLS gives Cochrane–Orcutt-like transformation.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Data whose error spread is unequal.</li><li>Time series with correlated errors.</li><li>Weighted survey data.</li><li>Grouped/panel data with heteroscedasticity.</li><li>Volatility-adjusted financial regression.</li></ol>
+</div>
 <h2 id="dummy">9. Indicator/Dummy Variables</h2>
 
 <p>Encode categorical predictors with $k$ levels using $k-1$ binary dummies (avoid dummy variable trap from perfect multicollinearity with intercept).</p>
@@ -298,6 +338,11 @@ Wage $=\beta_0+\beta_1\text{Edu}+\beta_2\text{Female}.$ $\beta_2$ is wage gap be
 Seasonal dummies: 4 quarters, use $D_2,D_3,D_4$ with Q1 as base. Test $D_2=D_3=D_4=0$ for absence of seasonality.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Adding gender or region to a wage model.</li><li>Seasonal (quarterly) effects in sales.</li><li>A before/after policy indicator.</li><li>Product-category effects on price.</li><li>Treatment vs control group indicator.</li></ol>
+</div>
 <h2 id="multi">10. Multicollinearity</h2>
 
 <p>High linear dependence among regressors → $X'X$ near-singular.</p>
@@ -334,6 +379,11 @@ $R_j^2=0.95\Rightarrow\text{VIF}=20$ — severe.
 Including both $\text{Income}$ and $\text{Income}^2$: high correlation but justified — center variable to reduce VIF.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Untangling correlated predictors (height and weight).</li><li>Economic indicators that move together.</li><li>Overlapping marketing channels.</li><li>Sensors that duplicate information.</li><li>Deciding which correlated feature to drop.</li></ol>
+</div>
 <h2 id="het">11. Heteroscedasticity</h2>
 
 <p>$\text{Var}(\varepsilon_i)=\sigma_i^2$ varies across $i.$</p>
@@ -365,6 +415,11 @@ Cross-section of households: variance of expenditure rises with income → heter
 Goldfeld–Quandt: $n=60$, sort by $X$, drop middle 12, fit two regressions of size 24. $F$-stat $=S_{high}^2/S_{low}^2.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Spending that varies more as income rises.</li><li>Profit variability that grows with firm size.</li><li>Correcting standard errors in economics.</li><li>Financial data with changing volatility.</li><li>Robust inference in cross-section studies.</li></ol>
+</div>
 <h2 id="auto">12. Autocorrelation &amp; Durbin–Watson</h2>
 
 <p>$\text{Cov}(\varepsilon_t,\varepsilon_s)\ne 0$ for $t\ne s$ — common in time series. AR(1): $\varepsilon_t=\rho\varepsilon_{t-1}+u_t.$</p>
@@ -389,6 +444,11 @@ $\hat\rho=0.5\Rightarrow d\approx 1.0$ — significant positive autocorrelation.
 $d=2.4$ with $n=30,k=3,$ $d_L=1.21,d_U=1.65$ — no autocorrelation (since $4-d=1.6$ between $d_L$ and $d_U$ — inconclusive on negative side).
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Correlated errors in monthly sales.</li><li>Stock-return regressions.</li><li>GDP and inflation time series.</li><li>Weather-driven demand models.</li><li>Spotting a missing trend or lag variable.</li></ol>
+</div>
 <h2 id="logit">13. Logistic Regression</h2>
 
 <p>For binary $y\in\{0,1\}$: $P(y=1\mid x)=\pi(x)=\frac{e^{x'\beta}}{1+e^{x'\beta}}.$
@@ -413,6 +473,11 @@ Disease vs age: $\hat\beta_{age}=0.05.$ Odds increase by $e^{0.05}\approx 5.13\%
 Two predictors: $\text{logit}(\pi)=-2+0.05\,\text{age}+0.4\,\text{smoke}.$ At age 50, smoker: $\text{logit}=-2+2.5+0.4=0.9,\,\pi=e^{0.9}/(1+e^{0.9})=0.711.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Predicting loan default (yes/no).</li><li>Diagnosing disease present/absent.</li><li>Predicting customer churn.</li><li>Classifying email as spam.</li><li>Click vs no-click on online ads.</li></ol>
+</div>
 <h2 id="restr">14. Restricted Regression Estimation</h2>
 
 <h3>Exact Restriction</h3>
@@ -437,6 +502,11 @@ Cobb-Douglas $\log Y=\beta_0+\beta_1\log K+\beta_2\log L+\varepsilon.$ Restricti
 Prior knowledge: $\beta_1\approx 0.5\pm 0.1.$ Use stochastic restriction with $r=0.5,R=(0,1,0),\Phi=0.01.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Imposing economic constraints like returns to scale.</li><li>Budget shares that must sum to one.</li><li>Using prior knowledge to stabilise estimates.</li><li>Enforcing a known sign or size on a coefficient.</li><li>Blending survey data with expert priors.</li></ol>
+</div>
 <h2 id="stoch">15. Stochastic Regressors &amp; Errors-in-Variables (EIV)</h2>
 
 <h3>Stochastic Regressors</h3>
@@ -456,6 +526,11 @@ Measurement error in $X$ leads to underestimated slope. With $\sigma_X^2=1,\sigm
 Reverse causality (omitted variables, simultaneity) → $\text{Cov}(X,\varepsilon)\ne 0$ → IV estimation needed.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Measurement error in self-reported income.</li><li>Test-score models with noisy inputs.</li><li>Sensor error in engineering models.</li><li>Bias from self-reported survey data.</li><li>Correcting attenuation bias in econometrics.</li></ol>
+</div>
 <h2 id="iv">16. Instrumental Variable (IV) Estimator</h2>
 
 <p>Instrument $Z$ satisfies: (i) $\text{Cov}(Z,X)\ne 0$ (relevance), (ii) $\text{Cov}(Z,\varepsilon)=0$ (exogeneity).
@@ -474,6 +549,11 @@ Returns to schooling: education $X$ correlated with ability ($\varepsilon$). Use
 Demand–supply: log price endogenous in demand. Use weather (supply shifter) as instrument.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Returns to schooling using distance to college.</li><li>Demand estimation using weather as a supply shifter.</li><li>Policy effects using eligibility rules.</li><li>Health effect of a habit using taxes as an instrument.</li><li>Causal effects when a regressor is endogenous.</li></ol>
+</div>
 <h2 id="sem">17. Simultaneous Equations Model &amp; Identification</h2>
 
 <p>Multiple endogenous variables determined jointly:
@@ -504,6 +584,11 @@ Demand: $Q=\alpha_0+\alpha_1 P+\alpha_2 Y+u_1$; Supply: $Q=\beta_0+\beta_1 P+\be
 If supply equation has no excluded exogenous variable, demand cannot be identified by IV — order condition fails.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Supply and demand set together.</li><li>Macro models of income and consumption.</li><li>Wage–price systems.</li><li>Market-equilibrium modelling.</li><li>Interdependent policy variables.</li></ol>
+</div>
 <h2 id="twosls">18. 2SLS &amp; k-class Estimator</h2>
 
 <h3>Two-Stage Least Squares (2SLS)</h3>
@@ -535,6 +620,11 @@ LIML preferred over 2SLS in small samples and weak instrument settings — choos
 
 </section>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Estimating demand with an endogenous price.</li><li>Labour-supply and wage systems.</li><li>Estimating macro-econometric models.</li><li>Causal inference in economics.</li><li>Robust estimation with weak instruments (LIML).</li></ol>
+</div>
 <div class="pagination">
   <a href="unit5.html">&larr; Unit 5</a>
   <a class="next" href="unit7.html">Unit 7: Time Series &rarr;</a>

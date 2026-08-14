@@ -111,6 +111,11 @@ $\mathbf X\sim N_2(\mathbf 0,\Sigma)$ with $\Sigma=\begin{pmatrix}4&2\\2&3\end{p
 $\mathbf X\sim N_3$ with $\Sigma=\text{diag}(1,4,9).$ Components are independent normals; $X_1\sim N(0,1),\,X_2\sim N(0,4),\,X_3\sim N(0,9).$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Modelling correlated test scores.</li><li>Returns of several assets in a portfolio.</li><li>Sensor arrays with correlated noise.</li><li>Height, weight and age modelled jointly.</li><li>The base for many statistics and ML methods.</li></ol>
+</div>
 <h2 id="est">2. Estimation of Mean Vector and Covariance Matrix</h2>
 
 <p>Sample $\mathbf X_1,\ldots,\mathbf X_n$ iid $N_p(\boldsymbol\mu,\Sigma).$ MLEs:
@@ -129,6 +134,11 @@ $n=5$ bivariate observations; compute $\bar{\mathbf X}=(\bar X_1,\bar X_2)^T$ an
 For $p=3,n=20$: $(n-1)\mathbf S\sim W_3(19,\Sigma).$ Rank of $\mathbf S$ equals 3 with probability 1 when $n>p.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Estimating asset means and covariances in finance.</li><li>Summarising multi-feature datasets.</li><li>Risk matrices in portfolio management.</li><li>Calibrating multivariate models.</li><li>Covariance estimation for sensor fusion.</li></ol>
+</div>
 <h2 id="sample">3. Distribution of Sample Mean Vector</h2>
 
 <p>If $\mathbf X_i\overset{\text{iid}}{\sim}N_p(\boldsymbol\mu,\Sigma)$, then
@@ -145,6 +155,11 @@ $p=2,n=25,\Sigma=\begin{pmatrix}1&0.5\\0.5&1\end{pmatrix}.$ $\bar{\mathbf X}\sim
 For known $\Sigma$, 100(1-$\alpha$)% confidence ellipsoid for $\boldsymbol\mu$: $n(\bar{\mathbf x}-\boldsymbol\mu)^T\Sigma^{-1}(\bar{\mathbf x}-\boldsymbol\mu)\le\chi^2_{p,\alpha}.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Confidence regions for several means at once.</li><li>Quality control of several measurements together.</li><li>Multivariate polling estimates.</li><li>Batch testing of multi-spec products.</li><li>Foundation for Hotelling's T² tests.</li></ol>
+</div>
 <h2 id="wishart">4. Wishart Distribution</h2>
 
 <div class="definition">
@@ -175,6 +190,11 @@ $p=1,n=10,\Sigma=4$: $W\sim 4\chi^2_{10}$ — sum of squares scaled.
 For $p=2,n=20$: $\mathbf W\sim W_2(20,\Sigma).$ Determinant has distribution $|\Sigma|\chi^2_{20}\chi^2_{19}.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Inference about a covariance matrix.</li><li>Bayesian priors for covariances.</li><li>Uncertainty in a portfolio risk matrix.</li><li>Distributions behind MANOVA tests.</li><li>Random-matrix models.</li></ol>
+</div>
 <h2 id="corr">5. Simple, Partial &amp; Multiple Correlation</h2>
 
 <h3>Simple (Pearson) Correlation</h3>
@@ -205,6 +225,11 @@ $\rho_{12}=0.6,\rho_{13}=0.5,\rho_{23}=0.4.$ $\rho_{12\cdot 3}=\frac{0.6-0.5\cdo
 $R^2=0.7$ in 3-variable model, $n=30.$ $F=\frac{0.7/2}{0.3/27}=31.5,$ $p$-value$<0.001.$
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>The link between two variables (simple).</li><li>Study effect on marks, controlling for IQ (partial).</li><li>Predicting one variable from many (multiple).</li><li>Removing confounders in research.</li><li>Ranking feature relevance in ML.</li></ol>
+</div>
 <h2 id="hot">6. Hotelling's $T^2$ Statistic</h2>
 
 <div class="definition">
@@ -230,6 +255,11 @@ $p=3,n=20,T^2=15.$ $F=(17/57)\cdot 15=4.47$; critical $F_{3,17,0.05}=3.20.$ Reje
 For $p=1,$ $T^2=t^2$ — recovers univariate $t$-test.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Comparing two groups on many measures at once.</li><li>Multivariate quality control.</li><li>Before/after checks on several health metrics.</li><li>Comparing full product profiles.</li><li>Testing mean vectors in research.</li></ol>
+</div>
 <h2 id="disc">7. Discriminant Analysis</h2>
 
 <h3>Fisher's Linear Discriminant (Two Groups)</h3>
@@ -258,6 +288,11 @@ $D^2=4\Rightarrow$ optimal misclassification probability $=\Phi(-1)=0.1587.$
 Two species of iris with $p=4$ measurements: Fisher's classic dataset; LDA gives near-perfect separation.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Classifying loan applicants (default or not).</li><li>Medical diagnosis from several test results.</li><li>Classifying flower or plant species.</li><li>Basics of face and handwriting recognition.</li><li>Grouping customers by credit risk.</li></ol>
+</div>
 <h2 id="pca">8. Principal Component Analysis (PCA)</h2>
 
 <p>Reduces dimensionality by finding orthogonal directions of maximum variance.</p>
@@ -299,6 +334,11 @@ $\Sigma=\begin{pmatrix}5&2\\2&2\end{pmatrix}$. Eigenvalues 6,1; eigenvectors $(2
 For 4 standardised variables (correlation matrix has trace 4): if first 2 eigenvalues sum to 3.2, retain 2 PCs covering 80% variance.
 </div>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Reducing many features to a few.</li><li>Compressing images.</li><li>Visualising high-dimensional data.</li><li>Combining indicators into a single index.</li><li>Noise reduction in signals.</li></ol>
+</div>
 <h2 id="cca">9. Canonical Correlation Analysis (CCA)</h2>
 
 <p>For two random vectors $\mathbf X(p\times 1)$ and $\mathbf Y(q\times 1)$ with covariance partitioned $\Sigma=\begin{pmatrix}\Sigma_{11}&\Sigma_{12}\\\Sigma_{21}&\Sigma_{22}\end{pmatrix}.$</p>
@@ -329,6 +369,11 @@ If $p=q=1$: canonical correlation = absolute value of simple correlation $|\rho|
 
 </section>
 
+
+<div class="realworld">
+<h4>🌍 Where it's used in real life</h4>
+<ol><li>Relating aptitude tests to job performance.</li><li>Linking diet variables to health variables.</li><li>Marketing-mix variables vs sales outcomes.</li><li>Genes vs traits associations.</li><li>Relating two blocks of survey questions.</li></ol>
+</div>
 <div class="pagination">
   <a href="unit7.html">&larr; Unit 7</a>
   <a class="next" href="unit9.html">Unit 9: Stochastic Processes &rarr;</a>
