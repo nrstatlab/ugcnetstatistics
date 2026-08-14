@@ -314,3 +314,13 @@ mjx-container { font-size: 1.05em !important; }
 .realworld h4 { margin: 0 0 0.4rem; color: var(--primary); font-size: 1rem; }
 .realworld ol { margin: 0 0 0 1.3rem; }
 .realworld li { margin-bottom: 0.2rem; font-size: 0.93rem; color: var(--text); }
+
+/* HOME PAGE COLOUR-GUIDE LEGEND */
+.legend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.legend-grid > div { margin: 0; }
+.legend-grid .realworld h4 { margin: 0 0 0.25rem; }
