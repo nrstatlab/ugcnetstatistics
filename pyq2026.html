@@ -474,7 +474,19 @@ window.MathJax = {
 <div class="mcq"><div class="q"><span class="qn">Q133.</span> Let $X$ and $Y$ be independent random variables each following an exponential distribution with parameter $\lambda$. Then the conditional distribution of $X$ given $X+Y=2$ should be:</div>
 <ol class="options"><li>Exponential$(2)$</li><li>$\beta_1\!\left(\tfrac\lambda2,\tfrac\lambda2\right)$</li><li>Uniform$(0,2)$</li><li>Gamma$(2,\lambda)$</li></ol>
 <details><summary>Show Answer</summary><p><strong>Answer: (C) Uniform$(0,2)$.</strong> For two iid exponential variables, the conditional density of $X$ given $X+Y=s$ is $\dfrac{f_X(x)f_Y(s-x)}{f_{X+Y}(s)}=\dfrac{\lambda^2 e^{-\lambda s}}{\lambda^2 s\,e^{-\lambda s}}=\dfrac1s$ for $0<x<s$ &mdash; i.e. Uniform$(0,s)$. With $s=2$, $X\mid(X+Y=2)\sim\text{Uniform}(0,2)$.</p></details></div>
-<section class="unit-content" style="margin-top:2rem;"><p style="color:var(--muted);"><strong>Progress:</strong> Paper I complete (50/50). Paper II (Statistics, Q51–Q150) is being added — 83/100 questions so far.</p></section>
+<div class="mcq"><div class="q"><span class="qn">Q134.</span> A $2^3$ factorial experiment with factors A, B and C is replicated twice. The error degrees of freedom will be:</div>
+<ol class="options"><li>8</li><li>7</li><li>15</li><li>16</li></ol>
+<details><summary>Show Answer</summary><p><strong>Answer: (B) 7.</strong> Total observations $=2^3\times2=16$, so total df $=15$. The 7 factorial effects (A, B, C, AB, AC, BC, ABC) take 7 df, and with the two replications treated as blocks the replication (block) df $=r-1=1$. Hence error df $=15-7-1=(r-1)(2^3-1)=7$.<br><span class="flag">&#9888; This assumes the standard factorial-in-blocks layout (replications = blocks). If instead analysed as a completely randomized design with no blocking, the error df would be $2^3(r-1)=8$.</span></p></details></div>
+<div class="mcq"><div class="q"><span class="qn">Q135.</span> If $N$ is the incidence matrix of a BIBD $(v,r,b,k,\lambda)$, then the value of $|NN\'|$ is:</div>
+<ol class="options"><li>$rk(\lambda-r)^{v-1}$</li><li>$rk(r-\lambda)^{v-1}$</li><li>$rk(r-\lambda)^{v+1}$</li><li>$rk(\lambda-r)^{v+1}$</li></ol>
+<details><summary>Show Answer</summary><p><strong>Answer: (B) $rk(r-\lambda)^{v-1}$.</strong> For a BIBD, $NN\'=(r-\lambda)I_v+\lambda J_v$. Its determinant is $(r-\lambda)^{v-1}\big[r+(v-1)\lambda\big]$. Using $\lambda(v-1)=r(k-1)$, we get $r+(v-1)\lambda=rk$, so $|NN\'|=rk\,(r-\lambda)^{v-1}$.</p></details></div>
+<div class="mcq"><div class="q"><span class="qn">Q136.</span> For the exponential distribution $f(x)=e^{-x},\ x\ge0$, the cumulative distribution function of $X_{(7)}$ (the maximum) in a random sample of size 7 is:</div>
+<ol class="options"><li>$(e^{-x})^7$</li><li>$(1+e^{-x})^7$</li><li>$(1-e^{-x})^7$</li><li>$(-e^{-x})^7$</li></ol>
+<details><summary>Show Answer</summary><p><strong>Answer: (C) $(1-e^{-x})^7$.</strong> The CDF of a single observation is $F(x)=1-e^{-x}$. The maximum $X_{(n)}\le x$ iff all $n$ observations are $\le x$, so $F_{X_{(7)}}(x)=[F(x)]^7=(1-e^{-x})^7$.</p></details></div>
+<div class="mcq"><div class="q"><span class="qn">Q137.</span> In the multiple linear regression model $y=X\beta+u$ with $E(u)=0,\ E(uu\')=\sigma^2 I_n$, let $C=X(X\'X)^{-1}X\'$. Then $E\big[(Cy)\{(I_n-C)y\}\'\big]$ is:</div>
+<ol class="options"><li>$\sigma^2 C$</li><li>0</li><li>$\sigma^2 CC\'$</li><li>$\sigma^2(n-k)CC\'$</li></ol>
+<details><summary>Show Answer</summary><p><strong>Answer: (B) 0.</strong> $Cy=X\beta+Cu$ (fitted values) and $(I_n-C)y=(I_n-C)u$ (residuals). Then $E[(Cy)\{(I_n-C)y\}\']=X\beta\,E(u\')(I_n-C)+C\,E(uu\')(I_n-C)=0+\sigma^2 C(I_n-C)=\sigma^2(C-C^2)=0$, since $C$ is idempotent. Fitted values and residuals are uncorrelated.</p></details></div>
+<section class="unit-content" style="margin-top:2rem;"><p style="color:var(--muted);"><strong>Progress:</strong> Paper I complete (50/50). Paper II (Statistics, Q51–Q150) is being added — 87/100 questions so far.</p></section>
 
 </main>
 <footer class="site-footer">
