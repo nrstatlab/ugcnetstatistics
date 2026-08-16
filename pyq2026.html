@@ -495,7 +495,17 @@ window.MathJax = {
 <div class="mcq"><div class="q"><span class="qn">Q140.</span> The maximum likelihood estimates of $\mu$ and $\Sigma$ based on the observations $X_1=\begin{pmatrix}1\\2\end{pmatrix},\ X_2=\begin{pmatrix}4\\4\end{pmatrix},\ X_3=\begin{pmatrix}4\\3\end{pmatrix}$ from $N_2(\mu,\Sigma)$ are, respectively:</div>
 <ol class="options"><li>$\begin{pmatrix}3\\3\end{pmatrix},\ \begin{pmatrix}2/3&1\\1&2\end{pmatrix}$</li><li>$\begin{pmatrix}3\\3\end{pmatrix},\ \begin{pmatrix}2&3\\3&6\end{pmatrix}$</li><li>$\begin{pmatrix}3\\3\end{pmatrix},\ \begin{pmatrix}6&3\\3&2\end{pmatrix}$</li><li>$\begin{pmatrix}3\\3\end{pmatrix},\ \begin{pmatrix}2&1\\1&2/3\end{pmatrix}$</li></ol>
 <details><summary>Show Answer</summary><p><strong>Answer: (D) $\begin{pmatrix}3\\3\end{pmatrix},\ \begin{pmatrix}2&1\\1&2/3\end{pmatrix}$.</strong> $\hat\mu=\bar X=(3,3)\'$. The MLE of $\Sigma$ uses divisor $n$: with deviations $(-2,-1),(1,1),(1,0)$, $\sum(X_i-\bar X)(X_i-\bar X)\'=\begin{pmatrix}6&3\\3&2\end{pmatrix}$, so $\hat\Sigma=\tfrac13\begin{pmatrix}6&3\\3&2\end{pmatrix}=\begin{pmatrix}2&1\\1&2/3\end{pmatrix}$.</p></details></div>
-<section class="unit-content" style="margin-top:2rem;"><p style="color:var(--muted);"><strong>Progress:</strong> Paper I complete (50/50). Paper II (Statistics, Q51–Q150) is being added — 90/100 questions so far.</p></section>
+<div class="comp"><span class="clabel">Comprehension</span>Consider a three-state Markov chain with transition probability matrix $P=\begin{pmatrix}q&p&0\\q&0&p\\0&q&p\end{pmatrix}$, where $0<p<1$ and $q+p=1$. (Questions 141&ndash;143 refer to this chain.)</div>
+<div class="mcq"><div class="q"><span class="qn">Q141.</span> The three-step transition probability $p_{12}^{(3)}$ is:</div>
+<ol class="options"><li>$p^3$</li><li>$pq(1+p)$</li><li>$pq(1+q)$</li><li>$pq^2$</li></ol>
+<details><summary>Show Answer</summary><p><strong>Answer: (B) $pq(1+p)$.</strong> Computing $P^2$ gives first row $(q^2+pq,\ pq,\ p^2)$. Then $p_{12}^{(3)}=(P^2)_{11}P_{12}+(P^2)_{12}P_{22}+(P^2)_{13}P_{32}=(q^2+pq)p+pq\cdot0+p^2\cdot q=pq^2+2p^2q=pq(q+2p)$. Since $q+2p=(q+p)+p=1+p$, this equals $pq(1+p)$.</p></details></div>
+<div class="mcq"><div class="q"><span class="qn">Q142.</span> The first-return probability to state 1 in three steps, $f_{11}^{(3)}$, is:</div>
+<ol class="options"><li>$p^2 q$</li><li>$pq^2$</li><li>$0$</li><li>$pq$</li></ol>
+<details><summary>Show Answer</summary><p><strong>Answer: (C) $0$.</strong> A first return to state 1 at step 3 must avoid state 1 at steps 1 and 2: the only feasible path is $1\to2\to3\to1$ (from 1 only $1\to2$ has positive probability among non-1 moves, then $2\to3$). But $P_{31}=0$, so the last step $3\to1$ is impossible. Hence $f_{11}^{(3)}=p\cdot p\cdot0=0$.</p></details></div>
+<div class="mcq"><div class="q"><span class="qn">Q143.</span> The expected number of steps required for a transition from state 1 to state 2, $\mu_{12}$, is:</div>
+<ol class="options"><li>$\infty$</li><li>$q^{-1}$</li><li>$p$</li><li>$p^{-1}$</li></ol>
+<details><summary>Show Answer</summary><p><strong>Answer: (D) $p^{-1}$.</strong> The mean first-passage time satisfies $\mu_{12}=1+\sum_{k\ne2}P_{1k}\mu_{k2}=1+P_{11}\mu_{12}+P_{13}\mu_{32}=1+q\,\mu_{12}$ (since $P_{13}=0$). Hence $\mu_{12}(1-q)=1$, giving $\mu_{12}=\dfrac{1}{1-q}=\dfrac1p=p^{-1}$.</p></details></div>
+<section class="unit-content" style="margin-top:2rem;"><p style="color:var(--muted);"><strong>Progress:</strong> Paper I complete (50/50). Paper II (Statistics, Q51–Q150) is being added — 93/100 questions so far.</p></section>
 
 </main>
 <footer class="site-footer">
