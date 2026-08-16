@@ -505,7 +505,13 @@ window.MathJax = {
 <div class="mcq"><div class="q"><span class="qn">Q143.</span> The expected number of steps required for a transition from state 1 to state 2, $\mu_{12}$, is:</div>
 <ol class="options"><li>$\infty$</li><li>$q^{-1}$</li><li>$p$</li><li>$p^{-1}$</li></ol>
 <details><summary>Show Answer</summary><p><strong>Answer: (D) $p^{-1}$.</strong> The mean first-passage time satisfies $\mu_{12}=1+\sum_{k\ne2}P_{1k}\mu_{k2}=1+P_{11}\mu_{12}+P_{13}\mu_{32}=1+q\,\mu_{12}$ (since $P_{13}=0$). Hence $\mu_{12}(1-q)=1$, giving $\mu_{12}=\dfrac{1}{1-q}=\dfrac1p=p^{-1}$.</p></details></div>
-<section class="unit-content" style="margin-top:2rem;"><p style="color:var(--muted);"><strong>Progress:</strong> Paper I complete (50/50). Paper II (Statistics, Q51–Q150) is being added — 93/100 questions so far.</p></section>
+<div class="mcq"><div class="q"><span class="qn">Q144.</span> The stationary probability distribution of the Markov chain is:</div>
+<ol class="options"><li>$\left(\dfrac{q^2}{1-pq},\ \dfrac{pq}{1-pq},\ \dfrac{p^2}{1-pq}\right)$</li><li>$\left(\tfrac12,\ 0,\ \tfrac12\right)$</li><li>$\left(\tfrac14,\ \tfrac12,\ \tfrac14\right)$</li><li>$\left(\tfrac13,\ \tfrac13,\ \tfrac13\right)$</li></ol>
+<details><summary>Show Answer</summary><p><strong>Answer: (A) $\left(\dfrac{q^2}{1-pq},\ \dfrac{pq}{1-pq},\ \dfrac{p^2}{1-pq}\right)$.</strong> Solving $\pi P=\pi$ gives $\pi_2=\tfrac pq\pi_1$ and $\pi_3=\tfrac{p^2}{q^2}\pi_1$, so $\pi\propto(q^2,\,pq,\,p^2)$. Direct check confirms $(q^2,pq,p^2)P=(q^2,pq,p^2)$ using $p+q=1$. Normalizing by $q^2+pq+p^2=(p+q)^2-pq=1-pq$ gives $\pi=\left(\dfrac{q^2}{1-pq},\dfrac{pq}{1-pq},\dfrac{p^2}{1-pq}\right)$. (Only when $p=q=\tfrac12$ does this reduce to $(\tfrac13,\tfrac13,\tfrac13)$.)<br><span class="flag">&#9888; Option 1 is shown faintly in the scan; the correct stationary vector is the symbolic $(q^2,pq,p^2)/(1-pq)$, which is the only $p,q$-dependent choice.</span></p></details></div>
+<div class="mcq"><div class="q"><span class="qn">Q145.</span> The first-passage probability $f_{12}^{(5)}$ is equal to:</div>
+<ol class="options"><li>$q^4 p$</li><li>$p^4 q$</li><li>$q^3 p^2$</li><li>$q(p^2+q^2)$</li></ol>
+<details><summary>Show Answer</summary><p><strong>Answer: (A) $q^4 p$.</strong> A first passage from 1 to 2 in 5 steps must avoid state 2 for the first 4 steps. Among the non-2 states, from state 1 only the self-loop $1\to1$ has positive probability ($P_{13}=0$), and state 3 is unreachable from 1 without passing through 2. So the walk stays at state 1 for four steps ($q$ each) and then moves $1\to2$ (probability $p$): $f_{12}^{(5)}=q^4 p$.</p></details></div>
+<section class="unit-content" style="margin-top:2rem;"><p style="color:var(--muted);"><strong>Progress:</strong> Paper I complete (50/50). Paper II (Statistics, Q51–Q150) is being added — 95/100 questions so far.</p></section>
 
 </main>
 <footer class="site-footer">
